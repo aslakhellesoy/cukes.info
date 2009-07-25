@@ -1,0 +1,14 @@
+---
+layout: post
+title: First Post!
+---
+
+h1. {{ page.title }}
+
+p(meta). 25 July 2009 - Bergen
+
+This is my first post
+
+h2. Why?
+
+Because I like Jekyll
