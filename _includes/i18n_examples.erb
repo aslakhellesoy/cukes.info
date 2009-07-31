@@ -5,7 +5,7 @@
 </ul>
 
 <% languages.each do |lang| %>
-  <div class="i18n_feature" id="<%= lang %>_example"<%= lang == 'en' ? '>' : ' style="display:none">' %>
+  <div class="i18n_feature" style="display:none" id="<%= lang %>_example">
     <h2><%= keyword(lang, 'native') %></h2>
     <dl class="keywords">
       <dt>Feature</dt>

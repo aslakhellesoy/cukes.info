@@ -1,0 +1,13 @@
+h1. cukes.info
+
+This is the new website for cukes.info. It uses Jekyll.
+
+h2. Building
+* Install mojombo-jekyll
+* Regenerate _includes/i18n_examples.html
+** rake i18n_examples
+** This is optional - the generated file is in Git
+** Only do this if one of the following:
+*** The Gherkin pygments lexer is updated
+*** _includes/i18n_examples.erb has changed
+* jekyll --server --auto

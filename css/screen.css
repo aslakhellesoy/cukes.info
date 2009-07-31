@@ -1,5 +1,6 @@
 body { 
   background-image: url("/images/textured-background.jpg");
+  font-size: 0.8em;
 }
 
 div#translations {

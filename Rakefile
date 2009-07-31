@@ -30,9 +30,7 @@ class I18nExamplesGenerator
   end
 end
 
-namespace :pages do
-  desc 'Generate I18n Examples'
-  task :i18n_examples do
-    I18nExamplesGenerator.new.generate
-  end
+desc 'Generate I18n Examples'
+task :i18n_examples do
+  I18nExamplesGenerator.new.generate
 end
