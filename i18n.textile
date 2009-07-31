@@ -1,0 +1,11 @@
+---
+layout: default
+title: Internationalization
+---
+h1. Internationalization
+
+It works
+
+<notextile>
+{% include i18n_examples.html %}
+</notextile>

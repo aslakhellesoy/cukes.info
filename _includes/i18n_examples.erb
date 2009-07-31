@@ -1,0 +1,35 @@
+<ul id="translation_links">
+  <% languages.each do |lang| %>
+    <li><a href="#<%= lang %>"><%= keyword(lang, 'native') %></a></li>
+  <% end %>
+</ul>
+
+<% languages.each do |lang| %>
+  <div class="i18n_feature" id="<%= lang %>_example"<%= lang == 'en' ? '>' : ' style="display:none">' %>
+    <h2><%= keyword(lang, 'native') %></h2>
+    <dl class="keywords">
+      <dt>Feature</dt>
+      <dd><%= keyword(lang, 'feature') %></dd>
+      <dt>Scenario</dt>
+      <dd><%= keyword(lang, 'scenario') %></dd>
+      <dt>Given</dt>
+      <dd><%= keyword(lang, 'given') %></dd>
+      <dt>When</dt>
+      <dd><%= keyword(lang, 'when') %></dd>
+      <dt>Then</dt>
+      <dd><%= keyword(lang, 'then') %></dd>
+      <dt>And</dt>
+      <dd><%= keyword(lang, 'and') %></dd>
+      <dt>But</dt>
+      <dd><%= keyword(lang, 'but') %></dd>
+      <dt>Scenario Outline</dt>
+      <dd><%= keyword(lang, 'scenario_outline') %></dd>
+      <dt>Background</dt>
+      <dd><%= keyword(lang, 'background') %></dd>
+      <dt>Examples</dt>
+      <dd><%= keyword(lang, 'examples') %></dd>
+    </dl>
+    
+    <% if example(lang) %><%= pygmentize(lang) %><% else %>No example. Maybe you want to contribute one?<% end %>
+  </div>
+<% end %>

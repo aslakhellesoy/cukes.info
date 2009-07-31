@@ -1,3 +1,20 @@
 body { 
   background-image: url("/images/textured-background.jpg");
 }
+
+div#translations {
+  position: relative;
+}
+
+.i18n_feature {
+  background: white;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 25em;
+}
+
+dl.keywords dt {
+  float: left;
+  width: 10em;
+}

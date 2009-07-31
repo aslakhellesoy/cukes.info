@@ -1,0 +1,1512 @@
+<ul id="translation_links">
+  
+    <li><a href="#en">English</a></li>
+  
+    <li><a href="#ar">العربية</a></li>
+  
+    <li><a href="#bg">български</a></li>
+  
+    <li><a href="#cat">català</a></li>
+  
+    <li><a href="#cy">Cymraeg</a></li>
+  
+    <li><a href="#cz">Česky</a></li>
+  
+    <li><a href="#da">dansk</a></li>
+  
+    <li><a href="#de">Deutsch</a></li>
+  
+    <li><a href="#en-au">Australian</a></li>
+  
+    <li><a href="#en-lol">LOLCAT</a></li>
+  
+    <li><a href="#en-tx">Texan</a></li>
+  
+    <li><a href="#es">español</a></li>
+  
+    <li><a href="#et">eesti keel</a></li>
+  
+    <li><a href="#fi">suomi</a></li>
+  
+    <li><a href="#fr">français</a></li>
+  
+    <li><a href="#he">עברית</a></li>
+  
+    <li><a href="#hu">magyar</a></li>
+  
+    <li><a href="#id">Bahasa Indonesia</a></li>
+  
+    <li><a href="#it">italiano</a></li>
+  
+    <li><a href="#ja">日本語</a></li>
+  
+    <li><a href="#ko">한국어</a></li>
+  
+    <li><a href="#lt">lietuvių kalba</a></li>
+  
+    <li><a href="#lv">latviešu</a></li>
+  
+    <li><a href="#nl">Nederlands</a></li>
+  
+    <li><a href="#no">norsk</a></li>
+  
+    <li><a href="#pl">polski</a></li>
+  
+    <li><a href="#pt">português</a></li>
+  
+    <li><a href="#ro">română</a></li>
+  
+    <li><a href="#ro2">română (diacritical)</a></li>
+  
+    <li><a href="#ru">русский</a></li>
+  
+    <li><a href="#se">Svenska</a></li>
+  
+    <li><a href="#sk">Slovensky</a></li>
+  
+    <li><a href="#vi">Tiếng Việt</a></li>
+  
+    <li><a href="#zh-CN">简体中文</a></li>
+  
+    <li><a href="#zh-TW">繁體中文</a></li>
+  
+</ul>
+
+
+  <div class="i18n_feature" id="en_example">
+    <h2>English</h2>
+    <dl class="keywords">
+      <dt>Feature</dt>
+      <dd>Feature</dd>
+      <dt>Scenario</dt>
+      <dd>Scenario</dd>
+      <dt>Given</dt>
+      <dd>Given</dd>
+      <dt>When</dt>
+      <dd>When</dd>
+      <dt>Then</dt>
+      <dd>Then</dd>
+      <dt>And</dt>
+      <dd>And</dd>
+      <dt>But</dt>
+      <dd>But</dd>
+      <dt>Scenario Outline</dt>
+      <dd>Scenario Outline</dd>
+      <dt>Background</dt>
+      <dd>Background</dd>
+      <dt>Examples</dt>
+      <dd>Examples|Scenarios</dd>
+    </dl>
+    
+    <div class="highlight"><pre><span class="c"># language: en</span>
+<span class="nc">Feature:</span><span class="no"> Addition</span><span class="nb"></span>
+<span class="nb">  In order to avoid silly mistakes</span>
+<span class="nb">  As a math idiot </span>
+<span class="nb">  I want to be told the sum of two numbers</span>
+
+  <span class="nc">Scenario Outline:</span><span class="no"> Add two numbers</span><span class="k"></span>
+<span class="k">    Given </span>I have entered <span class="o">&lt;</span><span class="ss">input_1</span><span class="o">&gt;</span> into the calculator
+    <span class="k">And </span>I have entered <span class="o">&lt;</span><span class="ss">input_2</span><span class="o">&gt;</span> into the calculator
+    <span class="k">When </span>I press <span class="o">&lt;</span><span class="ss">button</span><span class="o">&gt;</span>
+    <span class="k">Then </span>the result should be <span class="o">&lt;</span><span class="ss">output</span><span class="o">&gt;</span> on the screen
+
+  <span class="nc">Examples:</span>
+    |<span class="ss"> input_1</span> |<span class="ss"> input_2</span> |<span class="ss"> button</span> |<span class="ss"> output</span> |
+    | 20      | 30      | add    | 50     |
+    | 2       | 5       | add    | 7      |
+    | 0       | 40      | add    | 40     |
+</pre></div>
+
+  </div>
+
+  <div class="i18n_feature" id="ar_example" style="display:none">
+    <h2>العربية</h2>
+    <dl class="keywords">
+      <dt>Feature</dt>
+      <dd>خاصية</dd>
+      <dt>Scenario</dt>
+      <dd>سيناريو</dd>
+      <dt>Given</dt>
+      <dd>بفرض</dd>
+      <dt>When</dt>
+      <dd>متى|عندما</dd>
+      <dt>Then</dt>
+      <dd>اذاً|ثم</dd>
+      <dt>And</dt>
+      <dd>و</dd>
+      <dt>But</dt>
+      <dd>لكن</dd>
+      <dt>Scenario Outline</dt>
+      <dd>سيناريو مخطط</dd>
+      <dt>Background</dt>
+      <dd>الخلفية</dd>
+      <dt>Examples</dt>
+      <dd>امثلة</dd>
+    </dl>
+    
+    <div class="highlight"><pre><span class="c"># language: ar</span>
+خاصية: الجمع
+  من اجل تجنب الأخطاء السخيفة
+  كشخص غبي في الرياضيات
+  اريد معرفة ناتج جمع عددين
+
+  سيناريو مخطط: جمع عددين
+    بفرض كتابة <span class="o">&lt;</span><span class="ss">input_1</span><span class="o">&gt;</span> في الآلة الحاسبة
+    و كتابة <span class="o">&lt;</span><span class="ss">input_2</span><span class="o">&gt;</span> في الآلة الحاسبة
+    متى يتم الضغط على <span class="o">&lt;</span><span class="ss">button</span><span class="o">&gt;</span>
+    اذاً يظهر <span class="o">&lt;</span><span class="ss">output</span><span class="o">&gt;</span> على الشاشة
+
+  امثلة:
+    | input_1 | input_2 | button | output |
+    | 20      | 30      | جمع    | 50     |
+    | 2       | 5       | جمع    | 7      |
+    | 0       | 40      | جمع    | 40     |
+</pre></div>
+
+  </div>
+
+  <div class="i18n_feature" id="bg_example" style="display:none">
+    <h2>български</h2>
+    <dl class="keywords">
+      <dt>Feature</dt>
+      <dd>Функционалност</dd>
+      <dt>Scenario</dt>
+      <dd>Сценарий</dd>
+      <dt>Given</dt>
+      <dd>Дадено</dd>
+      <dt>When</dt>
+      <dd>Когато</dd>
+      <dt>Then</dt>
+      <dd>То</dd>
+      <dt>And</dt>
+      <dd>И</dd>
+      <dt>But</dt>
+      <dd>Но</dd>
+      <dt>Scenario Outline</dt>
+      <dd>Рамка на сценарий</dd>
+      <dt>Background</dt>
+      <dd>Предистория</dd>
+      <dt>Examples</dt>
+      <dd>Примери</dd>
+    </dl>
+    
+    <div class="highlight"><pre><span class="c"># language: bg</span>
+Функционалност: Събиране на числа
+  За да не го правят наум
+  Потребителите
+  Трябва да могат да събират числа с калкулатора
+
+  Сценарий: Събиране на две цели числа
+    Дадено е че съм въвел 50
+    И съм въвел 70
+    Когато натисна <span class="s">&quot;+&quot;</span>
+    То резултата трябва да е равен на 120
+</pre></div>
+
+  </div>
+
+  <div class="i18n_feature" id="cat_example" style="display:none">
+    <h2>català</h2>
+    <dl class="keywords">
+      <dt>Feature</dt>
+      <dd>Característica</dd>
+      <dt>Scenario</dt>
+      <dd>Escenari</dd>
+      <dt>Given</dt>
+      <dd>Donat|Donada</dd>
+      <dt>When</dt>
+      <dd>Quan</dd>
+      <dt>Then</dt>
+      <dd>Aleshores</dd>
+      <dt>And</dt>
+      <dd>I</dd>
+      <dt>But</dt>
+      <dd>Però</dd>
+      <dt>Scenario Outline</dt>
+      <dd>Esquema de l\'escenari</dd>
+      <dt>Background</dt>
+      <dd>Rerefons|Antecedents</dd>
+      <dt>Examples</dt>
+      <dd>Exemples</dd>
+    </dl>
+    
+    <div class="highlight"><pre><span class="c"># language: cat</span>
+Característica: Suma
+  Per evitar fer errors tontos
+  Com un matemàtic idiota
+  Vull saber la suma dels números
+
+  <span class="nc">Esquema de l&#39;escenari:</span><span class="no"> Sumar dos números</span><span class="k"></span>
+<span class="k">    Donat </span>que he introduït <span class="o">&lt;</span><span class="ss">entrada_1</span><span class="o">&gt;</span> a la calculadora
+    <span class="k">I </span>que he introduït <span class="o">&lt;</span><span class="ss">entrada_2</span><span class="o">&gt;</span> a la calculadora
+    <span class="k">Quan </span>premo el <span class="o">&lt;</span><span class="ss">botó</span><span class="o">&gt;</span>
+    <span class="k">Aleshores </span>el resultat ha de ser <span class="o">&lt;</span><span class="ss">resultat</span><span class="o">&gt;</span> a la pantalla
+
+  Exemples:
+    | entrada_1 | entrada_2 | botó | resultat |
+    | 20        | 30        | add  | 50       |
+    | 2         | 5         | add  | 7        |
+    | 0         | 40        | add  | 40       |
+</pre></div>
+
+  </div>
+
+  <div class="i18n_feature" id="cy_example" style="display:none">
+    <h2>Cymraeg</h2>
+    <dl class="keywords">
+      <dt>Feature</dt>
+      <dd>Arwedd</dd>
+      <dt>Scenario</dt>
+      <dd>Scenario</dd>
+      <dt>Given</dt>
+      <dd>anrhegedig a</dd>
+      <dt>When</dt>
+      <dd>Pryd</dd>
+      <dt>Then</dt>
+      <dd>Yna</dd>
+      <dt>And</dt>
+      <dd>A</dd>
+      <dt>But</dt>
+      <dd>Ond</dd>
+      <dt>Scenario Outline</dt>
+      <dd></dd>
+      <dt>Background</dt>
+      <dd></dd>
+      <dt>Examples</dt>
+      <dd>Enghreifftiau</dd>
+    </dl>
+    
+    No example. Maybe you want to contribute one?
+  </div>
+
+  <div class="i18n_feature" id="cz_example" style="display:none">
+    <h2>Česky</h2>
+    <dl class="keywords">
+      <dt>Feature</dt>
+      <dd>Požadavek</dd>
+      <dt>Scenario</dt>
+      <dd>Scénář</dd>
+      <dt>Given</dt>
+      <dd>Pokud</dd>
+      <dt>When</dt>
+      <dd>Když</dd>
+      <dt>Then</dt>
+      <dd>Pak</dd>
+      <dt>And</dt>
+      <dd>A|A také</dd>
+      <dt>But</dt>
+      <dd>Ale</dd>
+      <dt>Scenario Outline</dt>
+      <dd>Náčrt Scénáře|Osnova scénáře</dd>
+      <dt>Background</dt>
+      <dd>Pozadí|Kontext</dd>
+      <dt>Examples</dt>
+      <dd>Příklady</dd>
+    </dl>
+    
+    No example. Maybe you want to contribute one?
+  </div>
+
+  <div class="i18n_feature" id="da_example" style="display:none">
+    <h2>dansk</h2>
+    <dl class="keywords">
+      <dt>Feature</dt>
+      <dd>Egenskab</dd>
+      <dt>Scenario</dt>
+      <dd>Scenarie</dd>
+      <dt>Given</dt>
+      <dd>Givet</dd>
+      <dt>When</dt>
+      <dd>Når</dd>
+      <dt>Then</dt>
+      <dd>Så</dd>
+      <dt>And</dt>
+      <dd>Og</dd>
+      <dt>But</dt>
+      <dd>Men</dd>
+      <dt>Scenario Outline</dt>
+      <dd>Abstrakt Scenario</dd>
+      <dt>Background</dt>
+      <dd>Baggrund</dd>
+      <dt>Examples</dt>
+      <dd>Eksempler</dd>
+    </dl>
+    
+    <div class="highlight"><pre><span class="c"># language: da</span>
+Egenskab: Summering
+  For at slippe for at lave dumme fejl
+  Som en regnskabsfører
+  Vil jeg kunne lægge sammen
+
+  <span class="nc">Scenarie:</span><span class="no"> to tal</span><span class="k"></span>
+<span class="k">    Givet </span>at jeg har indtastet 5
+    <span class="k">Og </span>at jeg har indtastet 7
+    Når jeg summerer
+    Så skal resultatet være 12
+
+  <span class="nc">Scenarie:</span><span class="no"> tre tal</span><span class="k"></span>
+<span class="k">    Givet </span>at jeg har indtastet 5
+    <span class="k">Og </span>at jeg har indtastet 7
+    <span class="k">Og </span>at jeg har indtastet 1
+    Når jeg summerer
+    Så skal resultatet være 13
+</pre></div>
+
+  </div>
+
+  <div class="i18n_feature" id="de_example" style="display:none">
+    <h2>Deutsch</h2>
+    <dl class="keywords">
+      <dt>Feature</dt>
+      <dd>Funktionalität</dd>
+      <dt>Scenario</dt>
+      <dd>Szenario</dd>
+      <dt>Given</dt>
+      <dd>Gegeben sei</dd>
+      <dt>When</dt>
+      <dd>Wenn</dd>
+      <dt>Then</dt>
+      <dd>Dann</dd>
+      <dt>And</dt>
+      <dd>Und</dd>
+      <dt>But</dt>
+      <dd>Aber</dd>
+      <dt>Scenario Outline</dt>
+      <dd>Szenariogrundriss</dd>
+      <dt>Background</dt>
+      <dd>Grundlage</dd>
+      <dt>Examples</dt>
+      <dd>Beispiele</dd>
+    </dl>
+    
+    <div class="highlight"><pre><span class="c"># language: de</span>
+Funktionalität: Addition
+  Um dumme Fehler zu vermeiden
+  möchte ich als Matheidiot
+  die Summe zweier Zahlen gesagt bekommen
+
+  <span class="nc">Szenariogrundriss:</span><span class="no"> Zwei Zahlen hinzufügen</span><span class="k"></span>
+<span class="k">    Gegeben sei </span>ich habe <span class="o">&lt;</span><span class="ss">Eingabe_1</span><span class="o">&gt;</span> in den Taschenrechner eingegeben
+    <span class="k">Und </span>ich habe <span class="o">&lt;</span><span class="ss">Eingabe_2</span><span class="o">&gt;</span> in den Taschenrechner eingegeben
+    <span class="k">Wenn </span>ich <span class="o">&lt;</span><span class="ss">Knopf</span><span class="o">&gt;</span> drücke
+    <span class="k">Dann </span>sollte das Ergebniss auf dem Bildschirm <span class="o">&lt;</span><span class="ss">Ausgabe</span><span class="o">&gt;</span> sein
+
+  Beispiele:
+    | Eingabe_1 | Eingabe_2 | Knopf | Ausgabe |
+    | 20        | 30        | add   | 50      |
+    | 2         | 5         | add   | 7       |
+    | 0         | 40        | add   | 40      |
+</pre></div>
+
+  </div>
+
+  <div class="i18n_feature" id="en-au_example" style="display:none">
+    <h2>Australian</h2>
+    <dl class="keywords">
+      <dt>Feature</dt>
+      <dd>Crikey</dd>
+      <dt>Scenario</dt>
+      <dd>Mate</dd>
+      <dt>Given</dt>
+      <dd>Ya know how</dd>
+      <dt>When</dt>
+      <dd>When</dd>
+      <dt>Then</dt>
+      <dd>Ya gotta</dd>
+      <dt>And</dt>
+      <dd>N</dd>
+      <dt>But</dt>
+      <dd>Cept</dd>
+      <dt>Scenario Outline</dt>
+      <dd>Blokes</dd>
+      <dt>Background</dt>
+      <dd>Background</dd>
+      <dt>Examples</dt>
+      <dd>Cobber</dd>
+    </dl>
+    
+    No example. Maybe you want to contribute one?
+  </div>
+
+  <div class="i18n_feature" id="en-lol_example" style="display:none">
+    <h2>LOLCAT</h2>
+    <dl class="keywords">
+      <dt>Feature</dt>
+      <dd>OH HAI</dd>
+      <dt>Scenario</dt>
+      <dd>MISHUN</dd>
+      <dt>Given</dt>
+      <dd>I CAN HAZ</dd>
+      <dt>When</dt>
+      <dd>WEN</dd>
+      <dt>Then</dt>
+      <dd>DEN</dd>
+      <dt>And</dt>
+      <dd>AN</dd>
+      <dt>But</dt>
+      <dd>BUT</dd>
+      <dt>Scenario Outline</dt>
+      <dd>MISHUN SRSLY</dd>
+      <dt>Background</dt>
+      <dd>B4</dd>
+      <dt>Examples</dt>
+      <dd>EXAMPLZ</dd>
+    </dl>
+    
+    <div class="highlight"><pre><span class="c"># language: en-lol</span>
+OH HAI: STUFFING
+
+  <span class="nc">MISHUN:</span><span class="no"> CUCUMBR</span><span class="k"></span>
+<span class="k">    I </span>CAN HAZ IN TEH BEGINNIN 3 CUCUMBRZ
+    <span class="k">WEN </span>I EAT 2 CUCUMBRZ
+    <span class="k">DEN </span>I HAS 2 CUCUMBERZ IN MAH BELLY
+    <span class="k">AN </span>IN TEH END 1 CUCUMBRZ KTHXBAI
+</pre></div>
+
+  </div>
+
+  <div class="i18n_feature" id="en-tx_example" style="display:none">
+    <h2>Texan</h2>
+    <dl class="keywords">
+      <dt>Feature</dt>
+      <dd>Feature</dd>
+      <dt>Scenario</dt>
+      <dd>Scenario</dd>
+      <dt>Given</dt>
+      <dd>Given y\'all</dd>
+      <dt>When</dt>
+      <dd>When y\'all</dd>
+      <dt>Then</dt>
+      <dd>Then y\'all</dd>
+      <dt>And</dt>
+      <dd>And y\'all</dd>
+      <dt>But</dt>
+      <dd>But y\'all</dd>
+      <dt>Scenario Outline</dt>
+      <dd>All y\'all</dd>
+      <dt>Background</dt>
+      <dd>Background</dd>
+      <dt>Examples</dt>
+      <dd>Examples</dd>
+    </dl>
+    
+    No example. Maybe you want to contribute one?
+  </div>
+
+  <div class="i18n_feature" id="es_example" style="display:none">
+    <h2>español</h2>
+    <dl class="keywords">
+      <dt>Feature</dt>
+      <dd>Característica</dd>
+      <dt>Scenario</dt>
+      <dd>Escenario</dd>
+      <dt>Given</dt>
+      <dd>Dado</dd>
+      <dt>When</dt>
+      <dd>Cuando</dd>
+      <dt>Then</dt>
+      <dd>Entonces</dd>
+      <dt>And</dt>
+      <dd>Y</dd>
+      <dt>But</dt>
+      <dd>Pero</dd>
+      <dt>Scenario Outline</dt>
+      <dd>Esquema del escenario</dd>
+      <dt>Background</dt>
+      <dd>Antecedentes</dd>
+      <dt>Examples</dt>
+      <dd>Ejemplos</dd>
+    </dl>
+    
+    <div class="highlight"><pre><span class="c"># language: es</span>
+Característica: adición
+  Para evitar hacer errores tontos
+  Como un matemático idiota
+  Quiero saber la suma de los números
+
+  <span class="nc">Esquema del escenario:</span><span class="no"> Sumar dos números</span><span class="k"></span>
+<span class="k">    Dado </span>que he introducido <span class="o">&lt;</span><span class="ss">entrada_1</span><span class="o">&gt;</span> en la calculadora
+    <span class="k">Y </span>que he introducido <span class="o">&lt;</span><span class="ss">entrada_2</span><span class="o">&gt;</span> en la calculadora
+    <span class="k">Cuando </span>oprimo el <span class="o">&lt;</span><span class="ss">botón</span><span class="o">&gt;</span>
+    <span class="k">Entonces </span>el resultado debe ser <span class="o">&lt;</span><span class="ss">resultado</span><span class="o">&gt;</span> en la pantalla
+
+  Ejemplos:
+    | entrada_1 | entrada_2 | botón | resultado |
+    | 20        | 30        | add   | 50        |
+    | 2         | 5         | add   | 7         |
+    | 0         | 40        | add   | 40        |
+</pre></div>
+
+  </div>
+
+  <div class="i18n_feature" id="et_example" style="display:none">
+    <h2>eesti keel</h2>
+    <dl class="keywords">
+      <dt>Feature</dt>
+      <dd>Omadus</dd>
+      <dt>Scenario</dt>
+      <dd>Stsenaarium</dd>
+      <dt>Given</dt>
+      <dd>Eeldades</dd>
+      <dt>When</dt>
+      <dd>Kui</dd>
+      <dt>Then</dt>
+      <dd>Siis</dd>
+      <dt>And</dt>
+      <dd>Ja</dd>
+      <dt>But</dt>
+      <dd>Kuid</dd>
+      <dt>Scenario Outline</dt>
+      <dd>Raamstsenaarium</dd>
+      <dt>Background</dt>
+      <dd>Taust</dd>
+      <dt>Examples</dt>
+      <dd>Juhtumid</dd>
+    </dl>
+    
+    <div class="highlight"><pre><span class="c"># language: et</span>
+Omadus: Jagamine
+  Rumalate vigade vältimiseks
+  Peavad kassapidajad saama arvutada murdudes
+
+  <span class="nc">Stsenaarium:</span><span class="no"> Tavalised numrbid</span><span class="k"></span>
+<span class="k">    Eeldades </span>et olen sisestanud kalkulaatorisse numbri 3
+    <span class="k">Ja </span>olen sisestanud kalkulaatorisse numbri 2
+    <span class="k">Kui </span>ma vajutan jaga
+    <span class="k">Siis </span>vastuseks peab ekraanil kuvatama 1.5
+</pre></div>
+
+  </div>
+
+  <div class="i18n_feature" id="fi_example" style="display:none">
+    <h2>suomi</h2>
+    <dl class="keywords">
+      <dt>Feature</dt>
+      <dd>Ominaisuus</dd>
+      <dt>Scenario</dt>
+      <dd>Tapaus</dd>
+      <dt>Given</dt>
+      <dd>Oletetaan</dd>
+      <dt>When</dt>
+      <dd>Kun</dd>
+      <dt>Then</dt>
+      <dd>Niin</dd>
+      <dt>And</dt>
+      <dd>Ja</dd>
+      <dt>But</dt>
+      <dd>Mutta</dd>
+      <dt>Scenario Outline</dt>
+      <dd>Tapausaihio</dd>
+      <dt>Background</dt>
+      <dd>Tausta</dd>
+      <dt>Examples</dt>
+      <dd>Tapaukset</dd>
+    </dl>
+    
+    <div class="highlight"><pre><span class="c"># language: fi</span>
+Ominaisuus: Jakolasku
+  Välttyäkseen hölmöiltä virheiltä
+  Kassanhoitajan on voitava laskea osamäärä
+
+  <span class="nc">Tapaus:</span><span class="no"> Kokonaislukujen jakolasku</span><span class="k"></span>
+<span class="k">    Oletetaan </span>että olen syöttänyt laskimeen luvun 3
+    <span class="k">Ja </span>että olen syöttänyt laskimeen luvun 2
+    <span class="k">Kun </span>painan <span class="s">&quot;jaa&quot;</span>
+    <span class="k">Niin </span>laskimen ruudulla pitäisi näkyä tulos 1.5
+</pre></div>
+
+  </div>
+
+  <div class="i18n_feature" id="fr_example" style="display:none">
+    <h2>français</h2>
+    <dl class="keywords">
+      <dt>Feature</dt>
+      <dd>Fonctionnalité</dd>
+      <dt>Scenario</dt>
+      <dd>Scénario</dd>
+      <dt>Given</dt>
+      <dd>Soit</dd>
+      <dt>When</dt>
+      <dd>Lorsque</dd>
+      <dt>Then</dt>
+      <dd>Alors</dd>
+      <dt>And</dt>
+      <dd>Et</dd>
+      <dt>But</dt>
+      <dd>Mais</dd>
+      <dt>Scenario Outline</dt>
+      <dd>Plan du Scénario</dd>
+      <dt>Background</dt>
+      <dd>Contexte</dd>
+      <dt>Examples</dt>
+      <dd>Exemples</dd>
+    </dl>
+    
+    <div class="highlight"><pre><span class="c"># language: fr</span>
+Fonctionnalité: Addition
+  Afin de gagner du temps lors du calcul de la facture
+  <span class="k">En </span>tant que commerçant
+  Je souhaite pouvoir faire une addition
+
+  Plan du Scénario: Addition de deux nombres
+    <span class="k">Soit </span>une calculatrice
+    <span class="k">Et </span>que j<span class="s">&#39;entre </span><span class="o">&lt;</span><span class="ss">a</span><span class="o">&gt;</span><span class="s"> pour le premier nombre</span>
+<span class="s">    Et que je tape sur la touche &quot;+&quot;</span>
+<span class="s">    Et que j&#39;</span>entre <span class="o">&lt;</span><span class="ss">b</span><span class="o">&gt;</span> pour le second nombre
+    <span class="k">Lorsque </span>je tape sur la touche <span class="s">&quot;=&quot;</span>
+    <span class="k">Alors </span>le résultat affiché doit être <span class="o">&lt;</span><span class="ss">somme</span><span class="o">&gt;</span>
+
+    Exemples:
+      | a | b | somme |
+      | 2 | 2 | 4     |
+      | 2 | 3 | 5     |
+</pre></div>
+
+  </div>
+
+  <div class="i18n_feature" id="he_example" style="display:none">
+    <h2>עברית</h2>
+    <dl class="keywords">
+      <dt>Feature</dt>
+      <dd>תכונה</dd>
+      <dt>Scenario</dt>
+      <dd>תרחיש</dd>
+      <dt>Given</dt>
+      <dd>בהינתן</dd>
+      <dt>When</dt>
+      <dd>כאשר</dd>
+      <dt>Then</dt>
+      <dd>אז|אזי</dd>
+      <dt>And</dt>
+      <dd>וגם</dd>
+      <dt>But</dt>
+      <dd>אבל</dd>
+      <dt>Scenario Outline</dt>
+      <dd>תבנית תרחיש</dd>
+      <dt>Background</dt>
+      <dd>רקע</dd>
+      <dt>Examples</dt>
+      <dd>דוגמאות</dd>
+    </dl>
+    
+    <div class="highlight"><pre><span class="c"># language: he</span>
+תכונה: חיבור
+  כדי למנוע טעויות טפשיות
+  בתור בור מתמטי
+  אני רוצה שיגידו לי את הסכום של שני מספרים
+
+  תבנית תרחיש: חבר שני מספרים
+    בהינתן שהזנתי <span class="o">&lt;</span><span class="ss">קלט_1</span><span class="o">&gt;</span> למחשבון
+    וגם שהזנתי <span class="o">&lt;</span><span class="ss">קלט_2</span><span class="o">&gt;</span> למחשבון
+    כאשר אני לוחץ על <span class="o">&lt;</span><span class="ss">כפתור</span><span class="o">&gt;</span>
+    אז התוצאה על המסך צריכה להיות <span class="o">&lt;</span><span class="ss">פלט</span><span class="o">&gt;</span>
+
+  דוגמאות:
+    | קלט_1 | קלט_2 | כפתור | פלט |
+    | 20    | 30    | חבר   | 50  |
+    | 2     | 5     | חבר   | 7   |
+    | 0     | 40    | חבר   | 40  |
+</pre></div>
+
+  </div>
+
+  <div class="i18n_feature" id="hu_example" style="display:none">
+    <h2>magyar</h2>
+    <dl class="keywords">
+      <dt>Feature</dt>
+      <dd>Jellemző</dd>
+      <dt>Scenario</dt>
+      <dd>Forgatókönyv</dd>
+      <dt>Given</dt>
+      <dd>Ha</dd>
+      <dt>When</dt>
+      <dd>Majd</dd>
+      <dt>Then</dt>
+      <dd>Akkor</dd>
+      <dt>And</dt>
+      <dd>És</dd>
+      <dt>But</dt>
+      <dd>De</dd>
+      <dt>Scenario Outline</dt>
+      <dd>Forgatókönyv vázlat</dd>
+      <dt>Background</dt>
+      <dd>Háttér</dd>
+      <dt>Examples</dt>
+      <dd>Példák</dd>
+    </dl>
+    
+    <div class="highlight"><pre><span class="c"># language: hu</span>
+Jellemző: Összeadás
+  Azért, hogy elkerüljem a buta hibákat
+  amit diszkalkúliásként elkövethetek,
+  két szám összegét szeretném kiszámoltatni.
+
+  Forgatókönyv vázlat: Két szám összeadása
+    <span class="k">Ha </span>beütök a számológépbe egy <span class="o">&lt;</span><span class="ss">be_1</span><span class="o">&gt;</span>-est
+    És beütök a számológépbe egy <span class="o">&lt;</span><span class="ss">be_2</span><span class="o">&gt;</span>-est
+    <span class="k">Majd </span>megnyomom az <span class="o">&lt;</span><span class="ss">gomb</span><span class="o">&gt;</span> gombot
+    <span class="k">Akkor </span>eredményül <span class="o">&lt;</span><span class="ss">ki</span><span class="o">&gt;</span>-t kell kapnom
+
+  Példák:
+    | be_1 | be_2 | gomb | ki |
+    | 20   | 30   | add  | 50 |
+    | 2    | 5    | add  | 7  |
+    | 0    | 40   | add  | 40 |
+</pre></div>
+
+  </div>
+
+  <div class="i18n_feature" id="id_example" style="display:none">
+    <h2>Bahasa Indonesia</h2>
+    <dl class="keywords">
+      <dt>Feature</dt>
+      <dd>Fitur</dd>
+      <dt>Scenario</dt>
+      <dd>Skenario</dd>
+      <dt>Given</dt>
+      <dd>Dengan</dd>
+      <dt>When</dt>
+      <dd>Ketika</dd>
+      <dt>Then</dt>
+      <dd>Maka</dd>
+      <dt>And</dt>
+      <dd>Dan</dd>
+      <dt>But</dt>
+      <dd>Tapi</dd>
+      <dt>Scenario Outline</dt>
+      <dd>Skenario konsep</dd>
+      <dt>Background</dt>
+      <dd>Dasar</dd>
+      <dt>Examples</dt>
+      <dd>Contoh</dd>
+    </dl>
+    
+    <div class="highlight"><pre><span class="c"># language: id</span>
+Fitur: Addition
+  Untuk menghindari kesalahan konyol 
+  Sebagai orang yang gak bisa matematika
+  Aku ingin diberi tahu jumlah dua bilangan 
+
+  <span class="nc">Skenario konsep:</span><span class="no"> Menjumlahkan dua bilangan</span><span class="k"></span>
+<span class="k">    Dengan </span>aku sudah masukkan <span class="o">&lt;</span><span class="ss">input_1</span><span class="o">&gt;</span> ke kalkulator
+    <span class="k">Dan </span>aku sudah masukkan <span class="o">&lt;</span><span class="ss">input_2</span><span class="o">&gt;</span> ke kalkulator
+    <span class="k">Ketika </span>aku tekan <span class="o">&lt;</span><span class="ss">button</span><span class="o">&gt;</span>
+    <span class="k">Maka </span>hasilnya harus <span class="o">&lt;</span><span class="ss">output</span><span class="o">&gt;</span> di layar
+
+  Contoh:
+    | input_1 | input_2 | button | output |
+    | 20      | 30      | add    | 50     |
+    | 2       | 5       | add    | 7      |
+    | 0       | 40      | add    | 40     |
+</pre></div>
+
+  </div>
+
+  <div class="i18n_feature" id="it_example" style="display:none">
+    <h2>italiano</h2>
+    <dl class="keywords">
+      <dt>Feature</dt>
+      <dd>Funzionalità</dd>
+      <dt>Scenario</dt>
+      <dd>Scenario</dd>
+      <dt>Given</dt>
+      <dd>Dato</dd>
+      <dt>When</dt>
+      <dd>Quando</dd>
+      <dt>Then</dt>
+      <dd>Allora</dd>
+      <dt>And</dt>
+      <dd>E</dd>
+      <dt>But</dt>
+      <dd>Ma</dd>
+      <dt>Scenario Outline</dt>
+      <dd>Schema dello scenario</dd>
+      <dt>Background</dt>
+      <dd>Contesto</dd>
+      <dt>Examples</dt>
+      <dd>Esempi</dd>
+    </dl>
+    
+    <div class="highlight"><pre><span class="c"># language: it</span>
+Funzionalità: somma
+  Per evitare di fare errori stupidi
+  Come utente
+  Voglio sapere la somma di due numeri
+
+  <span class="nc">Scenario:</span><span class="no"> la somma di due numeri</span><span class="k"></span>
+<span class="k">    Dato </span>che ho inserito 5
+    <span class="k">E </span>che ho inserito 7
+    <span class="k">Quando </span>premo somma
+    <span class="k">Allora </span>il risultato deve essere 12
+</pre></div>
+
+  </div>
+
+  <div class="i18n_feature" id="ja_example" style="display:none">
+    <h2>日本語</h2>
+    <dl class="keywords">
+      <dt>Feature</dt>
+      <dd>フィーチャ|機能</dd>
+      <dt>Scenario</dt>
+      <dd>シナリオ</dd>
+      <dt>Given</dt>
+      <dd>前提</dd>
+      <dt>When</dt>
+      <dd>もし</dd>
+      <dt>Then</dt>
+      <dd>ならば</dd>
+      <dt>And</dt>
+      <dd>かつ</dd>
+      <dt>But</dt>
+      <dd>しかし|但し</dd>
+      <dt>Scenario Outline</dt>
+      <dd>シナリオアウトライン|シナリオテンプレート|テンプレ|シナリオテンプレ</dd>
+      <dt>Background</dt>
+      <dd>背景</dd>
+      <dt>Examples</dt>
+      <dd>例|サンプル</dd>
+    </dl>
+    
+    <div class="highlight"><pre><span class="c"># language: ja</span>
+フィーチャ: 加算
+  バカな間違いを避けるために
+  数学オンチとして
+  2つの数の合計を知りたい
+
+  シナリオテンプレート: 2つの数の加算について
+    前提 <span class="o">&lt;</span><span class="ss">値1</span><span class="o">&gt;</span> を入力
+    かつ <span class="o">&lt;</span><span class="ss">値2</span><span class="o">&gt;</span> を入力
+    もし <span class="o">&lt;</span><span class="ss">ボタン</span><span class="o">&gt;</span> を押した
+    ならば <span class="o">&lt;</span><span class="ss">結果</span><span class="o">&gt;</span> を表示
+
+  例:
+    | 値1 | 値2 | ボタン | 結果 |
+    | 20  | 30  | add    | 50   |
+    | 2   | 5   | add    | 7    |
+    | 0   | 40  | add    | 40   |
+</pre></div>
+
+  </div>
+
+  <div class="i18n_feature" id="ko_example" style="display:none">
+    <h2>한국어</h2>
+    <dl class="keywords">
+      <dt>Feature</dt>
+      <dd>기능</dd>
+      <dt>Scenario</dt>
+      <dd>시나리오</dd>
+      <dt>Given</dt>
+      <dd>조건</dd>
+      <dt>When</dt>
+      <dd>만일</dd>
+      <dt>Then</dt>
+      <dd>그러면</dd>
+      <dt>And</dt>
+      <dd>그리고</dd>
+      <dt>But</dt>
+      <dd>하지만</dd>
+      <dt>Scenario Outline</dt>
+      <dd>시나리오 개요</dd>
+      <dt>Background</dt>
+      <dd>배경</dd>
+      <dt>Examples</dt>
+      <dd>예</dd>
+    </dl>
+    
+    <div class="highlight"><pre><span class="c"># language: ko</span>
+기능: 덧셈
+  예기치못한 실수을 방지하기 위해
+  수학을 잘 못하는 사람으로써 
+  두숫자의 합을 알고 싶다
+
+  시나리오 개요: 두 숫자를 더하기
+    조건 계산기에 <span class="o">&lt;</span><span class="ss">입력1</span><span class="o">&gt;</span>을 입력했음
+    그리고 계산기에 <span class="o">&lt;</span><span class="ss">입력2</span><span class="o">&gt;</span>을 입력했음
+    만일 내가 <span class="o">&lt;</span><span class="ss">버튼</span><span class="o">&gt;</span>를 누르면
+    그러면 화면에 출력된 결과는 <span class="o">&lt;</span><span class="ss">결과</span><span class="o">&gt;</span>이다
+
+  예:
+    | 입력1 | 입력2 | 버튼 | 결과 |
+    | 20    | 30    | add  | 50 |
+    | 2     | 5     | add  | 7  |
+    | 0     | 40    | add  | 40 |
+</pre></div>
+
+  </div>
+
+  <div class="i18n_feature" id="lt_example" style="display:none">
+    <h2>lietuvių kalba</h2>
+    <dl class="keywords">
+      <dt>Feature</dt>
+      <dd>Savybė</dd>
+      <dt>Scenario</dt>
+      <dd>Scenarijus</dd>
+      <dt>Given</dt>
+      <dd>Duota</dd>
+      <dt>When</dt>
+      <dd>Kai</dd>
+      <dt>Then</dt>
+      <dd>Tada</dd>
+      <dt>And</dt>
+      <dd>Ir</dd>
+      <dt>But</dt>
+      <dd>Bet</dd>
+      <dt>Scenario Outline</dt>
+      <dd>Scenarijaus šablonas</dd>
+      <dt>Background</dt>
+      <dd>Kontekstas</dd>
+      <dt>Examples</dt>
+      <dd>Pavyzdžiai|Scenarijai|Variantai</dd>
+    </dl>
+    
+    <div class="highlight"><pre><span class="c"># language: lt</span>
+Sąvybė: Sudėtis
+  Norint išvengti kvailų klaidų
+  Kaip matematinis idiotas
+  Aš noriu, kad man pasakytų dviejų skaičių sumą
+
+  Scenarijaus šablonas: dviejų skaičių sudėtis
+    <span class="k">Duota </span>aš įvedžiau <span class="o">&lt;</span><span class="ss">įvestis_1</span><span class="o">&gt;</span> į skaičiuotuvą
+    <span class="k">Ir </span>aš įvedžiau <span class="o">&lt;</span><span class="ss">įvestis_2</span><span class="o">&gt;</span> į skaičiuotuvą
+    <span class="k">Kai </span>aš paspaudžiu <span class="s">&quot;</span><span class="o">&lt;</span><span class="ss">mygtukas</span><span class="o">&gt;</span><span class="s">&quot;</span>
+    <span class="k">Tada </span>rezultatas ekrane turi būti <span class="o">&lt;</span><span class="ss">išvestis</span><span class="o">&gt;</span>
+
+  Pavyzdžiai
+    | įvestis_1 | įvestis_2 | mygtukas | išvestis |
+    | 20        | 30        | add      | 50       |
+    | 2         | 5         | add      | 7        |
+    | 0         | 40        | add      | 40       |
+</pre></div>
+
+  </div>
+
+  <div class="i18n_feature" id="lv_example" style="display:none">
+    <h2>latviešu</h2>
+    <dl class="keywords">
+      <dt>Feature</dt>
+      <dd>Funkcionalitāte|Fīča</dd>
+      <dt>Scenario</dt>
+      <dd>Scenārijs</dd>
+      <dt>Given</dt>
+      <dd>Kad</dd>
+      <dt>When</dt>
+      <dd>Ja</dd>
+      <dt>Then</dt>
+      <dd>Tad</dd>
+      <dt>And</dt>
+      <dd>Un</dd>
+      <dt>But</dt>
+      <dd>Bet</dd>
+      <dt>Scenario Outline</dt>
+      <dd>Scenārijs pēc parauga</dd>
+      <dt>Background</dt>
+      <dd>Konteksts|Situācija</dd>
+      <dt>Examples</dt>
+      <dd>Piemēri|Paraugs</dd>
+    </dl>
+    
+    <div class="highlight"><pre><span class="c"># language: lv</span>
+Funkcionalitāte: Saskaitīšana
+  Lai izvairītos no muļķīgām kļūdām
+  Kā matemātikas idiots
+  Es vēlos uzzināt divu skaitļu summu
+
+  Scenārijs pēc parauga: Saskaitīt divus skaitļus
+    <span class="k">Kad </span>esmu ievadījis kalkulatorā <span class="o">&lt;</span><span class="ss">skaitlis_1</span><span class="o">&gt;</span>
+    <span class="k">Un </span>esmu ievadījis kalkulatorā <span class="o">&lt;</span><span class="ss">skaitlis_2</span><span class="o">&gt;</span>
+    <span class="k">Ja </span>nospiežu pogu <span class="o">&lt;</span><span class="ss">poga</span><span class="o">&gt;</span>
+    <span class="k">Tad </span>rezultātam uz ekrāna ir jābūt <span class="o">&lt;</span><span class="ss">rezultāts</span><span class="o">&gt;</span>
+
+  Paraugs:
+    | skaitlis_1 | skaitlis_2 | poga | rezultāts |
+    | 20         | 30         | add  | 50        |
+    | 2          | 5          | add  | 7         |
+    | 0          | 40         | add  | 40        |
+</pre></div>
+
+  </div>
+
+  <div class="i18n_feature" id="nl_example" style="display:none">
+    <h2>Nederlands</h2>
+    <dl class="keywords">
+      <dt>Feature</dt>
+      <dd>Functionaliteit</dd>
+      <dt>Scenario</dt>
+      <dd>Scenario</dd>
+      <dt>Given</dt>
+      <dd>Gegeven</dd>
+      <dt>When</dt>
+      <dd>Als</dd>
+      <dt>Then</dt>
+      <dd>Dan</dd>
+      <dt>And</dt>
+      <dd>En</dd>
+      <dt>But</dt>
+      <dd>Maar</dd>
+      <dt>Scenario Outline</dt>
+      <dd>Abstract Scenario</dd>
+      <dt>Background</dt>
+      <dd>Achtergrond</dd>
+      <dt>Examples</dt>
+      <dd>Voorbeelden</dd>
+    </dl>
+    
+    No example. Maybe you want to contribute one?
+  </div>
+
+  <div class="i18n_feature" id="no_example" style="display:none">
+    <h2>norsk</h2>
+    <dl class="keywords">
+      <dt>Feature</dt>
+      <dd>Egenskap</dd>
+      <dt>Scenario</dt>
+      <dd>Scenario</dd>
+      <dt>Given</dt>
+      <dd>Gitt</dd>
+      <dt>When</dt>
+      <dd>Når</dd>
+      <dt>Then</dt>
+      <dd>Så</dd>
+      <dt>And</dt>
+      <dd>Og</dd>
+      <dt>But</dt>
+      <dd>Men</dd>
+      <dt>Scenario Outline</dt>
+      <dd>Abstrakt Scenario</dd>
+      <dt>Background</dt>
+      <dd>Bakgrunn</dd>
+      <dt>Examples</dt>
+      <dd>Eksempler</dd>
+    </dl>
+    
+    <div class="highlight"><pre><span class="c"># language: no</span>
+Egenskap: Summering
+  For å slippe å gjøre dumme feil
+  Som en regnskapsfører
+  Vil jeg kunne legge sammen
+
+  <span class="nc">Scenario:</span><span class="no"> to tall</span><span class="k"></span>
+<span class="k">    Gitt </span>at jeg har tastet inn 5
+    <span class="k">Og </span>at jeg har tastet inn 7
+    Når jeg summerer
+    Så skal resultatet være 12
+
+  <span class="nn">@iterasjon3</span>
+  <span class="nc">Scenario:</span><span class="no"> tre tall</span><span class="k"></span>
+<span class="k">    Gitt </span>at jeg har tastet inn 5
+    <span class="k">Og </span>at jeg har tastet inn 7
+    <span class="k">Og </span>at jeg har tastet inn 1
+    Når jeg summerer
+    Så skal resultatet være 13
+</pre></div>
+
+  </div>
+
+  <div class="i18n_feature" id="pl_example" style="display:none">
+    <h2>polski</h2>
+    <dl class="keywords">
+      <dt>Feature</dt>
+      <dd>Właściwość</dd>
+      <dt>Scenario</dt>
+      <dd>Scenariusz</dd>
+      <dt>Given</dt>
+      <dd>Zakładając</dd>
+      <dt>When</dt>
+      <dd>Jeżeli</dd>
+      <dt>Then</dt>
+      <dd>Wtedy</dd>
+      <dt>And</dt>
+      <dd>Oraz</dd>
+      <dt>But</dt>
+      <dd>Ale</dd>
+      <dt>Scenario Outline</dt>
+      <dd>Szablon scenariusza</dd>
+      <dt>Background</dt>
+      <dd>Założenia</dd>
+      <dt>Examples</dt>
+      <dd>Przykłady</dd>
+    </dl>
+    
+    <div class="highlight"><pre><span class="c"># language: pl</span>
+Właściwość: Dodawanie
+  W celu uniknięcia głupich błędów
+  Jako matematyczny idiota
+  Chcę sprawdzić wartość sumy dwóch liczb
+
+  <span class="nc">Szablon scenariusza:</span><span class="no"> Dodaj dwie liczby</span>
+<span class="no">    Zakładając wprowadzenie do kalkulatora liczby &lt;liczba_1&gt;</span><span class="k"></span>
+<span class="k">    Oraz </span>wprowadzenie do kalkulatora liczby <span class="o">&lt;</span><span class="ss">liczba_2</span><span class="o">&gt;</span>
+    Jeżeli nacisnę <span class="o">&lt;</span><span class="ss">przycisk</span><span class="o">&gt;</span>
+    <span class="k">Wtedy </span>rezultat <span class="o">&lt;</span><span class="ss">wynik</span><span class="o">&gt;</span> wyświetli się na ekranie
+
+  Przykłady:
+    | liczba_1 | liczba_2 | przycisk | wynik  |
+    | 20       | 30       | dodaj    | 50     |
+    | 2        | 5        | dodaj    | 7      |
+    | 0        | 40       | dodaj    | 40     |
+</pre></div>
+
+  </div>
+
+  <div class="i18n_feature" id="pt_example" style="display:none">
+    <h2>português</h2>
+    <dl class="keywords">
+      <dt>Feature</dt>
+      <dd>Funcionalidade</dd>
+      <dt>Scenario</dt>
+      <dd>Cenário|Cenario</dd>
+      <dt>Given</dt>
+      <dd>Dado</dd>
+      <dt>When</dt>
+      <dd>Quando</dd>
+      <dt>Then</dt>
+      <dd>Então|Entao</dd>
+      <dt>And</dt>
+      <dd>E</dd>
+      <dt>But</dt>
+      <dd>Mas</dd>
+      <dt>Scenario Outline</dt>
+      <dd>Esquema do Cenário|Esquema do Cenario</dd>
+      <dt>Background</dt>
+      <dd>Contexto</dd>
+      <dt>Examples</dt>
+      <dd>Exemplos</dd>
+    </dl>
+    
+    <div class="highlight"><pre><span class="c"># language: pt</span>
+Funcionalidade: Adição
+  Para evitar erros bobos
+  Como um péssimo matemático
+  Eu quero saber como somar dois números
+
+  Cenário: Adicionar dois números
+		<span class="k">Dado </span>que eu digitei 50 na calculadora
+		<span class="k">E </span>que eu digitei 70 na calculadora
+		<span class="k">Quando </span>eu aperto o botão de soma
+		Então o resultado na calculadora deve ser 120
+</pre></div>
+
+  </div>
+
+  <div class="i18n_feature" id="ro_example" style="display:none">
+    <h2>română</h2>
+    <dl class="keywords">
+      <dt>Feature</dt>
+      <dd>Functionalitate</dd>
+      <dt>Scenario</dt>
+      <dd>Scenariu</dd>
+      <dt>Given</dt>
+      <dd>Daca</dd>
+      <dt>When</dt>
+      <dd>Cand</dd>
+      <dt>Then</dt>
+      <dd>Atunci</dd>
+      <dt>And</dt>
+      <dd>Si</dd>
+      <dt>But</dt>
+      <dd>Dar</dd>
+      <dt>Scenario Outline</dt>
+      <dd></dd>
+      <dt>Background</dt>
+      <dd></dd>
+      <dt>Examples</dt>
+      <dd></dd>
+    </dl>
+    
+    <div class="highlight"><pre><span class="c"># language: ro</span>
+Functionalitate: suma
+  Pentru a nu face erori stupide
+  Ca utilizator
+  Vreau sa stiu suma a doua numere
+
+  <span class="nc">Scenariu:</span><span class="no"> suma a doua numere</span><span class="k"></span>
+<span class="k">    Daca </span>introduc 5
+    <span class="k">Si </span>apoi introduc 7
+    <span class="k">Cand </span>apas suma
+    <span class="k">Atunci </span>rezultatul trebuie sa fie 12
+</pre></div>
+
+  </div>
+
+  <div class="i18n_feature" id="ro2_example" style="display:none">
+    <h2>română (diacritical)</h2>
+    <dl class="keywords">
+      <dt>Feature</dt>
+      <dd>Funcționalitate</dd>
+      <dt>Scenario</dt>
+      <dd>Scenariu</dd>
+      <dt>Given</dt>
+      <dd>Dacă</dd>
+      <dt>When</dt>
+      <dd>Când</dd>
+      <dt>Then</dt>
+      <dd>Atunci</dd>
+      <dt>And</dt>
+      <dd>Și</dd>
+      <dt>But</dt>
+      <dd>Dar</dd>
+      <dt>Scenario Outline</dt>
+      <dd></dd>
+      <dt>Background</dt>
+      <dd></dd>
+      <dt>Examples</dt>
+      <dd></dd>
+    </dl>
+    
+    No example. Maybe you want to contribute one?
+  </div>
+
+  <div class="i18n_feature" id="ru_example" style="display:none">
+    <h2>русский</h2>
+    <dl class="keywords">
+      <dt>Feature</dt>
+      <dd>Функционал</dd>
+      <dt>Scenario</dt>
+      <dd>Сценарий</dd>
+      <dt>Given</dt>
+      <dd>Допустим</dd>
+      <dt>When</dt>
+      <dd>Если</dd>
+      <dt>Then</dt>
+      <dd>То</dd>
+      <dt>And</dt>
+      <dd>И|К тому же</dd>
+      <dt>But</dt>
+      <dd>Но|А</dd>
+      <dt>Scenario Outline</dt>
+      <dd>Структура сценария</dd>
+      <dt>Background</dt>
+      <dd>Предыстория</dd>
+      <dt>Examples</dt>
+      <dd>Значения</dd>
+    </dl>
+    
+    <div class="highlight"><pre><span class="c"># language: ru</span>
+Функционал: Сложение чисел
+  Чтобы не складывать в уме
+  Все, у кого с этим туго
+  Хотят автоматическое сложение целых чисел
+
+  Сценарий: Сложение двух целых чисел
+    Допустим я ввожу число 50
+    И затем ввожу число 70
+    Если я нажимаю <span class="s">&quot;+&quot;</span>
+    То результатом должно быть число 120
+</pre></div>
+
+  </div>
+
+  <div class="i18n_feature" id="se_example" style="display:none">
+    <h2>Svenska</h2>
+    <dl class="keywords">
+      <dt>Feature</dt>
+      <dd>Egenskap</dd>
+      <dt>Scenario</dt>
+      <dd>Scenario</dd>
+      <dt>Given</dt>
+      <dd>Givet</dd>
+      <dt>When</dt>
+      <dd>När</dd>
+      <dt>Then</dt>
+      <dd>Så</dd>
+      <dt>And</dt>
+      <dd>Och</dd>
+      <dt>But</dt>
+      <dd>Men</dd>
+      <dt>Scenario Outline</dt>
+      <dd>Abstrakt Scenario</dd>
+      <dt>Background</dt>
+      <dd>Bakgrund</dd>
+      <dt>Examples</dt>
+      <dd>Exempel</dd>
+    </dl>
+    
+    <div class="highlight"><pre><span class="c"># language: se</span>
+Egenskap: Summering
+  För att slippa att göra dumma fel
+  Som räknare
+  Vill jag kunna lägga samman
+
+  <span class="nc">Scenario:</span><span class="no"> två tal</span><span class="k"></span>
+<span class="k">    Givet </span>att jag har knappat in 5
+    <span class="k">Och </span>att jag har knappat in 7
+    När jag summerar
+    Så ska resultatet vara 12
+  
+  <span class="nc">Scenario:</span><span class="no"> tre tal</span><span class="k"></span>
+<span class="k">    Givet </span>att jag har knappat in 5
+    <span class="k">Och </span>att jag har knappat in 4
+    <span class="k">Och </span>att jag har knappat in 3
+    När jag summerar
+    Så ska resultatet vara 12
+</pre></div>
+
+  </div>
+
+  <div class="i18n_feature" id="sk_example" style="display:none">
+    <h2>Slovensky</h2>
+    <dl class="keywords">
+      <dt>Feature</dt>
+      <dd>Požiadavka</dd>
+      <dt>Scenario</dt>
+      <dd>Scenár</dd>
+      <dt>Given</dt>
+      <dd>Pokiaľ</dd>
+      <dt>When</dt>
+      <dd>Keď</dd>
+      <dt>Then</dt>
+      <dd>Tak</dd>
+      <dt>And</dt>
+      <dd>A</dd>
+      <dt>But</dt>
+      <dd>Ale</dd>
+      <dt>Scenario Outline</dt>
+      <dd>Náčrt Scenáru</dd>
+      <dt>Background</dt>
+      <dd>Pozadie</dd>
+      <dt>Examples</dt>
+      <dd>Príklady</dd>
+    </dl>
+    
+    <div class="highlight"><pre><span class="c"># language: sk</span>
+Požiadavka: Sčítavanie
+  Aby som sa vyhol hlúpym chybám
+  Ako matematický idiot
+  Chcem vedieť ako sa sčítavajú dve čísla
+
+  Náčrt Scenáru: Sčítanie dvoch čísel
+    Pokiaľ Zadám číslo <span class="o">&lt;</span><span class="ss">vstup_1</span><span class="o">&gt;</span> do kalkulačky
+    <span class="k">A </span>Zadám číslo <span class="o">&lt;</span><span class="ss">vstup_2</span><span class="o">&gt;</span> do kalkulačky
+    Keď Stlačím tlačidlo <span class="o">&lt;</span><span class="ss">tlačidlo</span><span class="o">&gt;</span>
+    <span class="k">Tak </span>Výsledok by mal byť <span class="o">&lt;</span><span class="ss">výstup</span><span class="o">&gt;</span>
+
+  Príklady:
+    | vstup_1 | vstup_2 | tlačidlo | výstup |
+    | 20      | 30      | add      | 50     |
+    | 2       | 5       | add      | 7      |
+    | 0       | 40      | add      | 40     |
+</pre></div>
+
+  </div>
+
+  <div class="i18n_feature" id="vi_example" style="display:none">
+    <h2>Tiếng Việt</h2>
+    <dl class="keywords">
+      <dt>Feature</dt>
+      <dd>Tính năng</dd>
+      <dt>Scenario</dt>
+      <dd>Tình huống|Kịch bản</dd>
+      <dt>Given</dt>
+      <dd>Biết|Cho</dd>
+      <dt>When</dt>
+      <dd>Khi</dd>
+      <dt>Then</dt>
+      <dd>Thì</dd>
+      <dt>And</dt>
+      <dd>Và</dd>
+      <dt>But</dt>
+      <dd>Nhưng</dd>
+      <dt>Scenario Outline</dt>
+      <dd>Khung tình huống|Khung kịch bản</dd>
+      <dt>Background</dt>
+      <dd>Bối cảnh</dd>
+      <dt>Examples</dt>
+      <dd>Dữ liệu</dd>
+    </dl>
+    
+    No example. Maybe you want to contribute one?
+  </div>
+
+  <div class="i18n_feature" id="zh-CN_example" style="display:none">
+    <h2>简体中文</h2>
+    <dl class="keywords">
+      <dt>Feature</dt>
+      <dd>功能</dd>
+      <dt>Scenario</dt>
+      <dd>场景</dd>
+      <dt>Given</dt>
+      <dd>假如</dd>
+      <dt>When</dt>
+      <dd>当</dd>
+      <dt>Then</dt>
+      <dd>那么</dd>
+      <dt>And</dt>
+      <dd>而且</dd>
+      <dt>But</dt>
+      <dd>但是</dd>
+      <dt>Scenario Outline</dt>
+      <dd>场景大纲</dd>
+      <dt>Background</dt>
+      <dd>背景</dd>
+      <dt>Examples</dt>
+      <dd>例子</dd>
+    </dl>
+    
+    <div class="highlight"><pre><span class="c"># language: zh-CN</span>
+功能:加法
+  为了避免一些愚蠢的错误
+  作为一个数学白痴
+  我希望有人告诉我数字相加的结果
+
+  场景: 两个数相加
+    假如我已经在计算器里输入6
+    而且我已经在计算器里输入7
+    当我按相加按钮
+    那么我应该在屏幕上看到的结果是13
+
+  场景: 三个数相加
+    假如我已经在计算器里输入6
+    而且我已经在计算器里输入7
+    而且我已经在计算器里输入1 
+    当我按相加按钮
+    那么我应该在屏幕上看到的结果是14
+</pre></div>
+
+  </div>
+
+  <div class="i18n_feature" id="zh-TW_example" style="display:none">
+    <h2>繁體中文</h2>
+    <dl class="keywords">
+      <dt>Feature</dt>
+      <dd>功能</dd>
+      <dt>Scenario</dt>
+      <dd>場景|劇本</dd>
+      <dt>Given</dt>
+      <dd>假設</dd>
+      <dt>When</dt>
+      <dd>當</dd>
+      <dt>Then</dt>
+      <dd>那麼</dd>
+      <dt>And</dt>
+      <dd>而且|並且</dd>
+      <dt>But</dt>
+      <dd>但是</dd>
+      <dt>Scenario Outline</dt>
+      <dd>場景大綱|劇本大綱</dd>
+      <dt>Background</dt>
+      <dd>背景</dd>
+      <dt>Examples</dt>
+      <dd>例子</dd>
+    </dl>
+    
+    <div class="highlight"><pre><span class="c"># language: zh-TW</span>
+功能: 加法
+  為了避免愚蠢的錯誤
+  作為一個數學白痴 
+  我希望有人能告訴我兩個數相加的結果
+
+  場景大綱: 將兩個數相加
+    假設我已經在計算機上輸入 <span class="o">&lt;</span><span class="ss">數值_1</span><span class="o">&gt;</span>
+    而且我已經在計算機上輸入 <span class="o">&lt;</span><span class="ss">數值_2</span><span class="o">&gt;</span>
+    當我按下 <span class="o">&lt;</span><span class="ss">按鈕</span><span class="o">&gt;</span>
+    那麼螢幕上應該顯示 <span class="o">&lt;</span><span class="ss">結果</span><span class="o">&gt;</span>
+
+  例子:
+    | 數值_1 | 數值_2 | 按鈕 | 結果 |
+    | 20     | 30     | add  | 50   |
+    | 2      | 5      | add  | 7    |
+    | 0      | 40     | add  | 40   |
+</pre></div>
+
+  </div>
+
