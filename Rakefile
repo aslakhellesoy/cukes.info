@@ -25,6 +25,10 @@ class I18nExamplesGenerator
     Dir["#{@i18ndir}/#{lang}/features/*feature"][0]
   end
 
+  def lang_name(lang)
+    keyword(lang, 'native') == keyword(lang, 'name') ? keyword(lang, 'native') : "#{keyword(lang, 'native')} (#{keyword(lang, 'name')})"
+  end
+
   def pygmentize(lang)
     `pygmentize -f html -O encoding=utf-8 #{example(lang)}`
   end

@@ -1,12 +1,12 @@
 <ul id="translation_links">
   <% languages.each do |lang| %>
-    <li><a href="#<%= lang %>"><%= keyword(lang, 'native') %></a></li>
+    <li><a href="#<%= lang %>"><%= lang_name(lang) %></a></li>
   <% end %>
 </ul>
 
 <% languages.each do |lang| %>
   <div class="i18n_feature" style="display:none" id="<%= lang %>_example">
-    <h2><%= keyword(lang, 'native') %></h2>
+    <h2><%= lang_name(lang) %></h2>
     <dl class="keywords">
       <dt>Feature</dt>
       <dd><%= keyword(lang, 'feature') %></dd>
