@@ -6,7 +6,6 @@ class I18nExamplesGenerator
     @i18ndir = File.expand_path(File.join(Cucumber::LIBDIR, '../examples/i18n'))
 
     @languages = Cucumber::LANGUAGES.keys.sort
-    @languages.unshift(@languages.delete('en'))
   end
   
   def generate
@@ -30,7 +29,9 @@ class I18nExamplesGenerator
   end
 
   def pygmentize(lang)
-    `pygmentize -f html -O encoding=utf-8 #{example(lang)}`
+    pygmentize = "pygmentize -f html -O encoding=utf-8 #{example(lang)}"
+    puts pygmentize
+    `#{pygmentize}`
   end
 end
 

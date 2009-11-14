@@ -5,7 +5,7 @@ This is the new website for cukes.info. It uses Jekyll.
 h2. Building
 * Install mojombo-jekyll
 * Install pygments
-* Install http://github.com/bmabey/cucumber-pygments-lexer/tree/master
+* Install http://github.com/aslakhellesoy/cucumber-pygments-lexer/tree/master
 * Install the latest cucumber gem
 * Regenerate _includes/i18n_examples.html:
 ** rake i18n_examples

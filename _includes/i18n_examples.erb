@@ -1,11 +1,12 @@
-<ul id="translation_links">
+<div id="i18n" class="ui-tabs ui-widget ui-widget-content ui-corner-all">
+<ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all">
   <% languages.each do |lang| %>
-    <li><a href="#<%= lang %>"><%= lang_name(lang) %></a></li>
+    <li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-active"><a href="#<%= lang %>"><%= lang %></a></li>
   <% end %>
 </ul>
 
 <% languages.each do |lang| %>
-  <div class="i18n_feature" style="display:none" id="<%= lang %>_example">
+  <div id="<%= lang %>">
     <h2><%= lang_name(lang) %></h2>
     <dl class="keywords">
       <dt>Feature</dt>
@@ -33,3 +34,4 @@
     <% if example(lang) %><%= pygmentize(lang) %><% else %>No example. Maybe you want to contribute one?<% end %>
   </div>
 <% end %>
+</div>

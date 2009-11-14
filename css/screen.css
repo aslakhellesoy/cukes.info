@@ -7,15 +7,17 @@ div#translations {
   position: relative;
 }
 
-.i18n_feature {
-  background: white;
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 25em;
-}
-
 dl.keywords dt {
   float: left;
   width: 10em;
+}
+
+.ui-tabs .ui-tabs-nav li a {
+  float:left;
+  padding:0.1em 0.1em;
+  text-decoration:none;
+}
+
+.highlight { 
+  padding: 0.1em 1em;
 }
