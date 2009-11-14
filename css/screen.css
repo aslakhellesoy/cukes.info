@@ -1,6 +1,6 @@
 body { 
   background-image: url("/images/textured-background.jpg");
-  font-size: 0.8em;
+  font-size: 1em;
 }
 
 div#translations {
@@ -20,4 +20,5 @@ dl.keywords dt {
 
 .highlight { 
   padding: 0.1em 1em;
+  -moz-border-radius: 8px;
 }
