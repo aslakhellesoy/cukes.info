@@ -16,40 +16,37 @@
   <!-- Homepage CSS -->
   <link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen, projection" />
 
-  <script type="text/javascript" src="http://www.google.com/jsapi"></script>
-  <script type="text/javascript">
-    google.load("jquery", "1.3.2");
-    google.load("jqueryui", "1.7.2");
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="http://plugins.jquery.com/files/jquery.cookie.js.txt"></script>
 
-    google.setOnLoadCallback(function() {
-      $(document).ready(function(){
-        $("#i18n").tabs({
-          selected: Math.max(0, $("div#i18n > div").index($(window.location.hash || '#en'))),
-          select: function(e, ui) {
-            var url = ui.tab.href;
-            document.location = url;
-            return true;
-          }
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $("#i18n").tabs({
+        selected: Math.max(0, $("div#i18n > div").index($(window.location.hash || '#en'))),
+        select: function(e, ui) {
+          var url = ui.tab.href;
+          document.location = url;
+          return true;
+        }
+      });
+
+      function showLanguage(lang) {
+        $.each(["ruby", "java", "c#", "scala", "groovy", "clj", "js"], function(i, l) {
+          $("." + l).hide();
         });
+        $("." + lang).show();
+
+        var date = new Date();
+        date.setTime(date.getTime() + (3 * 24 * 60 * 60 * 1000));
+        $.cookie('language', lang, { path: '/', expires: date });
+      }
+      showLanguage($.cookie('language') || "ruby");
+      
+      $("#language img").click(function(e) {
+        showLanguage(e.target.id);
       });
     });
-
-
-    // function showI18n(hash) {
-    //   var new_i18n = hash + "_i18n";
-    //   $(new_i18n).show();
-    //   if(window.current_i18n && window.current_i18n != new_i18n) {
-    //     $(window.current_i18n).hide();
-    //   }
-    //   window.current_i18n = new_i18n;
-    // }
-    
-    // $(document).ready(function () {
-    //   showI18n(window.location.hash || '#en');
-    //   $("#i18n_links a").click(function (e) {
-    //     showI18n(e.target.hash);
-    //   });
-    // });
   </script>
 </head>
 <body>
@@ -58,6 +55,18 @@
   <div class="title">
     <a href="/">Cucumber</a>
     <a class="extra" href="/">home</a>
+  </div>
+
+  <div id="language">
+    <ul>
+      <li><img id="ruby" src="/images/ruby.png"></li>
+      <li><img id="java" src="/images/java.png"></li>
+      <li><img id="c#" src="/images/dotnet.png"></li>
+      <li><img id="scala" src="/images/scala.png"></li>
+      <li><img id="groovy" src="/images/groovy.png"></li>
+      <li><img id="clj" src="/images/clojure.png"></li>
+      <li><img id="js" src="/images/rhino.png"></li>
+    </ul>
   </div>
   
   {{ content }}

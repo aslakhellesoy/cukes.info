@@ -4,61 +4,131 @@ title: Step Definitions
 ---
 h1. Step Definitions
 
+Step definitions are defined in ruby files under <code>features/step_definitions/*_steps.rb</code>. Here is a simple example:
+
 {% highlight ruby %}
-module Cucumber
-  module Constantize #:nodoc:
-    def constantize(camel_cased_word)
-      try = 0
-      begin
-        try += 1
-        names = camel_cased_word.split('::')
-        names.shift if names.empty? || names.first.empty?
-
-        constant = Object
-        names.each do |name|
-          constant = constant.const_defined?(name) ? constant.const_get(name) : constant.const_missing(name)
-        end
-        constant
-      rescue NameError => e
-        require underscore(camel_cased_word)
-        if try < 2
-          retry
-        else
-          raise e
-        end
-      end
-    end
-
-    # Snagged from active_support
-    def underscore(camel_cased_word)
-      camel_cased_word.to_s.gsub(/::/, '/').
-        gsub(/([A-Z]+)([A-Z][a-z])/,'\1_\2').
-        gsub(/([a-z\d])([A-Z])/,'\1_\2').
-        tr("-", "_").
-        downcase
-    end
-  end
+Given /^I have (\d+) cucumbers in my belly$/ do |cukes|
+  # Some Ruby code here
 end
 {% endhighlight %}
 
-Hallo
+{% highlight java %}
+@Given("^I have (\\d+) cucumbers in my belly$")
+public void cukesInTheBelly(int cukes)
+  // Some Java code here
+end
+{% endhighlight %}
+
+{% highlight c# %}
+[Given(@"^I have (\d+) cucumbers in my belly$")]
+public void CukesInTheBelly()
+{
+    // Some C# code here
+}
+{% endhighlight %}
+
+A step definition is analogous to a _method definition /  unction definition_ in any kind of OO/procedural programming language. Step definitions can take 0 or more arguments, identified by groups in the Regexp (and an equal number of arguments to the Proc). 
+
+Then there are Steps. Steps are declared in your <code>features/*.feature</code> files. Here is an example:
 
 {% highlight gherkin %}
-# language: en
-Feature: Addition
-  In order to avoid silly mistakes
-  As a math idiot 
-  I want to be told the sum of two numbers
+Given I have 93 cucumbers in my belly
+{% endhighlight %}
 
-  Scenario Outline: Add two numbers
-    Given I have entered <input_1> into the calculator
-    And I have entered <input_2> into the calculator
-    When I press <button>
-    Then the result should be <output> on the screen
+A step is analogous to a method or function _invocation_. In this example, you're "calling" the step definition above with one argument - the string "93". Cucumber matches the Step against the Step Definition's Regexp and takes all of the captures from that match and passes them to the Proc.
 
-  Examples:
-    | input_1 | input_2 | button | output |
-    | 20      | 30      | add    | 50     |
-    | 2       | 5       | add    | 7      |
-    | 0       | 40      | add    | 40     |
+Step Definitions start with an "adjective":http://www.merriam-webster.com/dictionary/given or an "adverb":http://www.merriam-webster.com/dictionary/when, and can be expressed in any of Cucumber's supported [[Spoken languages]]. All Step definitions are loaded (and defined) before Cucumber starts to execute the plain text.
+
+When Cucumber executes the plain text, it will for each step look for a registered Step Definition with a matching Regexp. If it finds one it will execute its Proc, passing all groups from the Regexp match as arguments to the Proc.
+
+The adjective/adverb has *no* significance when Cucumber is registering or looking for Step Definitions.
+
+Also check out [[Multiline Step Arguments]] for more info on how to pass entire tables or bigger strings to your step definitions.
+
+h2. Successful steps
+
+When Cucumber finds a matching Step Definition it will execute it. If the block in the step definition doesn't raise an Exception, the step is marked as successful (green). What you return from a Step Definition has no significance what so ever.
+
+h2. Undefined steps
+
+When Cucumber can't find a matching Step Definition the step gets marked as yellow, and all subsequent steps in the scenario are skipped. If you use <code>--strict</code> this will cause Cucumber to exit with <code>1</code>.
+
+h2. Pending steps
+
+When a Step Definition's Proc invokes the <code>#pending</code> method, the step is marked as yellow (as with undefined ones), reminding you that you have work to do. If you use <code>--strict</code> this will cause Cucumber to exit with <code>1</code>.
+
+h2. Failed steps
+
+When a Step Definition's Proc is executed and raises an error, the step is marked as red. What you return from a Step Definition has no significance what so ever. Returning nil or false will *not* cause a step definition to fail.
+
+h2. Skipped steps
+
+Steps that follow undefined, pending or failed steps are never executed (even if there is a matching Step Definition), and are marked cyan.
+
+h2. Ambiguous steps
+
+Consider these step definitions:
+
+{% highlight ruby %}
+Given /Three (.*) mice/ do |disability|
+end
+
+Given /Three blind (.*)/ do |animal|
+end
+{% endhighlight %}
+
+And a plain text step:
+
+{% highlight gherkin %}
+Given Three blind mice
+{% endhighlight %}
+
+Cucumber can't make a decision about what Step Definition to execute, and wil raise a <code>Cucumber::Ambiguous</code> error telling you to fix the ambiguity.
+
+h3. Guess mode
+
+Imagine you have these step definitions:
+
+{% highlight ruby %}
+Given /we had (.*)/ do |what|
+end
+
+# A really versatile step definition!
+Given /we had (.*) on the (.*)/ do |what, where|
+end
+{% endhighlight %}
+
+And a plain text step:
+
+{% highlight gherkin %}
+Given we had drinks on the roof
+{% endhighlight %}
+
+
+The plain text step will match the Regexp of both step definitions and raise <code>Cucumber::Ambiguous</code>. However,
+if you run Cucumber with <code>--guess</code>, it will guess that you were aiming for the step definition with 2 match groups.
+
+There is ranking logic that gets invoked when the option is turned on:
+
+# The longest Regexp with 0 capture groups always wins.
+# The Regexp with the most capture groups wins (when there are none with 0 groups)
+# If there are 2+ Regexen with the same number of capture groups, the one with the shortest overall captured string length wins
+# If there are still 2+ options then an Ambiguous error is raised
+
+So if you try <code>--guess</code> with the mice above, Cucumber will pick <code>/Three blind (.*)/</code>, because "mice" is shorter than "blind".
+
+Consider guess mode a workaround. We still recommend you try to have unambiguous regular expressions. When you have a lot of step definitions you quickly lose track of the situations where cucumber will apply guessing logic, and that can lead to some surprises.
+
+h2. Redundant Step Definitions
+
+In Cucumber you're not allowed to use a regexp more than once in a Step Definition (even across files, even with different code inside the Proc), so the following would cause a <code>Cucumber::Redundant</code> error:
+
+{% highlight ruby %}
+Given /Three (.*) mice/ do |disability|
+  # some code
+end
+
+Given /Three (.*) mice/ do |disability|
+  # some other code
+end
 {% endhighlight %}
