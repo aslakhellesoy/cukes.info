@@ -2,15 +2,22 @@ h1. cukes.info
 
 This is the new website for cukes.info. It uses Jekyll.
 
-h2. Building
-* Install mojombo-jekyll
+h2. Software
 * Install pygments
-* Install http://github.com/aslakhellesoy/cucumber-pygments-lexer/tree/master
+* Install http://github.com/aslakhellesoy/cucumber-pygments-lexer : sudo python setup.py install
+* Install http://github.com/aslakhellesoy/pygments-groovy : sudo python setup.py install
+* Install http://github.com/aslakhellesoy/jekyll : rake install
 * Install the latest cucumber gem
+
+h2. Building
+
+The i18n examples are built from Rake:
+
 * Regenerate _includes/i18n_examples.html:
-** rake i18n_examples
-** This is optional - the generated file is in Git
-** Only do this if one of the following:
-*** The Gherkin pygments lexer is updated (It still doesn't recognise several of the i18n keywords for some reason)
-*** _includes/i18n_examples.erb has been edited
+* rake i18n_examples
 * jekyll --server --auto
+
+h2. TODO
+
+* Layout
+* http://matthewjamestaylor.com/blog/perfect-2-column-right-menu.htm

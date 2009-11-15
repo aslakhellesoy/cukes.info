@@ -31,7 +31,7 @@ Later if we put ruby code on the site we'll modify remaining classes too.
 .highlight .m { color: #009999 } /* Literal.Number */
   .highlight .s { color: #66FF00 } /* Literal.String */
   .highlight .n { color: #FF6600 }
-.highlight .na { color: #008080 } /* Name.Attribute */
+  .highlight .na { color: #339999 } /* Name.Attribute */
   .highlight .nb { color: #FFCC00 } /* Name.Builtin */
   .highlight .nc { color: #FF6600; } /* Name.Class */
   .highlight .no { color: #FFCC00 } /* Name.Constant */

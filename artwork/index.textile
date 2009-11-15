@@ -1,3 +1,7 @@
+---
+layout: default
+title: Artwork
+---
 h1. Artwork
 
 Links to PSD, PNG etc that people can use to promote Cucumber

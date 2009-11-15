@@ -32,7 +32,7 @@
       });
 
       function showLanguage(lang) {
-        $.each(["ruby", "java", "c#", "scala", "groovy", "clj", "js"], function(i, l) {
+        $.each(["ruby", "java", "csharp", "scala", "groovy", "clojure", "js", "ik"], function(i, l) {
           $("." + l).hide();
         });
         $("." + lang).show();
@@ -41,6 +41,7 @@
         date.setTime(date.getTime() + (3 * 24 * 60 * 60 * 1000));
         $.cookie('language', lang, { path: '/', expires: date });
       }
+
       showLanguage($.cookie('language') || "ruby");
       
       $("#language img").click(function(e) {
@@ -59,13 +60,14 @@
 
   <div id="language">
     <ul>
-      <li><img id="ruby" src="/images/ruby.png"></li>
-      <li><img id="java" src="/images/java.png"></li>
-      <li><img id="c#" src="/images/dotnet.png"></li>
-      <li><img id="scala" src="/images/scala.png"></li>
-      <li><img id="groovy" src="/images/groovy.png"></li>
-      <li><img id="clj" src="/images/clojure.png"></li>
-      <li><img id="js" src="/images/rhino.png"></li>
+      <li><img id="ruby" alt="Ruby" src="/images/ruby.png" /></li>
+      <li><img id="java" alt="Java" src="/images/java.png" /></li>
+      <li><img id="csharp" alt="C#" src="/images/dotnet.png" /></li>
+      <li><img id="scala" alt="Scala" src="/images/scala.png" /></li>
+      <li><img id="groovy" alt="Groovy" src="/images/groovy.png" /></li>
+      <li><img id="clojure" alt="Clojure" src="/images/clojure.png" /></li>
+      <li><img id="js" alt="Javascript" src="/images/rhino.png" /></li>
+      <li><img id="ik" alt="Ioke" src="/images/ioke.png" /></li>
     </ul>
   </div>
   

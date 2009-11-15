@@ -4,7 +4,7 @@ title: Step Definitions
 ---
 h1. Step Definitions
 
-Step definitions are defined in ruby files under <code>features/step_definitions/*_steps.rb</code>. Here is a simple example:
+Step definitions are defined in ruby files under <code>features/step_definitions/*_steps.rb</code>. Here is a simple example in {% lang %}:
 
 {% highlight ruby %}
 Given /^I have (\d+) cucumbers in my belly$/ do |cukes|
@@ -15,11 +15,11 @@ end
 {% highlight java %}
 @Given("^I have (\\d+) cucumbers in my belly$")
 public void cukesInTheBelly(int cukes)
-  // Some Java code here
+    // Some Java code here
 end
 {% endhighlight %}
 
-{% highlight c# %}
+{% highlight csharp %}
 [Given(@"^I have (\d+) cucumbers in my belly$")]
 public void CukesInTheBelly()
 {
@@ -27,7 +27,39 @@ public void CukesInTheBelly()
 }
 {% endhighlight %}
 
-A step definition is analogous to a _method definition /  unction definition_ in any kind of OO/procedural programming language. Step definitions can take 0 or more arguments, identified by groups in the Regexp (and an equal number of arguments to the Proc). 
+{% highlight scala %}
+Given("""^I have (\d+) cucumbers in my belly$""") { cukes: Int =>
+  // Some Scala code here
+}
+{% endhighlight %}
+
+{% highlight groovy %}
+Given(~"^I have (\\d+) cucumbers in my belly$") { int cukes ->
+  // Some Groovy code here
+}
+{% endhighlight %}
+
+{% highlight clojure %}
+(Given #"^I have (\d+) cucumbers in my belly$"
+  ; Some Clojure code here
+  )
+{% endhighlight %}
+
+{% highlight js %}
+Given(/^I have (\d+) cucumbers in my belly$/, function(cukes) {
+  // Some Javascript code here
+});
+{% endhighlight %}
+
+{% highlight ik %}
+Given(#/^I have ({number}\d+) cukes in my belly$/,
+  ; Some Ioke code here
+  )
+{% endhighlight %}
+
+Also note that you can define steps with {% link Internationalization %} or {% link Artwork %}
+
+A step definition is analogous to a _method definition or function definition_ in a conventional programming language. Instead of having a literal name they are named by a Regexp. Step definitions can take 0 or more arguments, identified by groups in the Regexp (and an equal number of arguments to the {% stepdef %}). 
 
 Then there are Steps. Steps are declared in your <code>features/*.feature</code> files. Here is an example:
 
@@ -35,11 +67,11 @@ Then there are Steps. Steps are declared in your <code>features/*.feature</code>
 Given I have 93 cucumbers in my belly
 {% endhighlight %}
 
-A step is analogous to a method or function _invocation_. In this example, you're "calling" the step definition above with one argument - the string "93". Cucumber matches the Step against the Step Definition's Regexp and takes all of the captures from that match and passes them to the Proc.
+A step is analogous to a method or function _invocation_. In this example, you're "calling" the step definition above with one argument - the string "93". Cucumber matches the Step against the Step Definition's Regexp and takes all of the captures from that match and passes them to the {% stepdef %}.
 
 Step Definitions start with an "adjective":http://www.merriam-webster.com/dictionary/given or an "adverb":http://www.merriam-webster.com/dictionary/when, and can be expressed in any of Cucumber's supported [[Spoken languages]]. All Step definitions are loaded (and defined) before Cucumber starts to execute the plain text.
 
-When Cucumber executes the plain text, it will for each step look for a registered Step Definition with a matching Regexp. If it finds one it will execute its Proc, passing all groups from the Regexp match as arguments to the Proc.
+When Cucumber executes the plain text, it will for each step look for a registered Step Definition with a matching Regexp. If it finds one it will execute the associated {% stepdef %}, passing all groups from the Regexp match as arguments to the {% stepdef %}.
 
 The adjective/adverb has *no* significance when Cucumber is registering or looking for Step Definitions.
 
@@ -55,11 +87,11 @@ When Cucumber can't find a matching Step Definition the step gets marked as yell
 
 h2. Pending steps
 
-When a Step Definition's Proc invokes the <code>#pending</code> method, the step is marked as yellow (as with undefined ones), reminding you that you have work to do. If you use <code>--strict</code> this will cause Cucumber to exit with <code>1</code>.
+When a Step Definition's {% stepdef %} invokes the <code>#pending</code> method, the step is marked as yellow (as with undefined ones), reminding you that you have work to do. If you use <code>--strict</code> this will cause Cucumber to exit with <code>1</code>.
 
 h2. Failed steps
 
-When a Step Definition's Proc is executed and raises an error, the step is marked as red. What you return from a Step Definition has no significance what so ever. Returning nil or false will *not* cause a step definition to fail.
+When a Step Definition's {% stepdef %} is executed and raises an error, the step is marked as red. What you return from a Step Definition has no significance what so ever. Returning nil or false will *not* cause a step definition to fail.
 
 h2. Skipped steps
 
@@ -121,7 +153,7 @@ Consider guess mode a workaround. We still recommend you try to have unambiguous
 
 h2. Redundant Step Definitions
 
-In Cucumber you're not allowed to use a regexp more than once in a Step Definition (even across files, even with different code inside the Proc), so the following would cause a <code>Cucumber::Redundant</code> error:
+In Cucumber you're not allowed to use a regexp more than once in a Step Definition (even across files, even with different code inside the {% stepdef %}), so the following would cause a <code>Cucumber::Redundant</code> error:
 
 {% highlight ruby %}
 Given /Three (.*) mice/ do |disability|
