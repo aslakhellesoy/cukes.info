@@ -39,3 +39,5 @@ desc 'Generate I18n Examples'
 task :i18n_examples do
   I18nExamplesGenerator.new.generate
 end
+
+task :default => :i18n_examples

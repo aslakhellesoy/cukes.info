@@ -40,7 +40,7 @@ Later if we put ruby code on the site we'll modify remaining classes too.
   .highlight .nf { color: #FFCC00 } /* Name.Function */
   .highlight .nn {} /* Name.Namespace #99CC99 */
 .highlight .nt { color: #000080 } /* Name.Tag */
-.highlight .nv { color: #008080 } /* Name.Variable */
+  .highlight .nv { color: #339999 } /* Name.Variable */
 .highlight .ow { font-weight: bold } /* Operator.Word */
   .highlight .p {  }
 .highlight .w { color: #bbbbbb } /* Text.Whitespace */
