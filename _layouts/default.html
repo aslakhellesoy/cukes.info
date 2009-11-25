@@ -16,11 +16,14 @@
   <!-- Homepage CSS -->
   <link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen, projection" />
 
+  <script type="text/javascript" src="http://www.google.com/jsapi?key=ABQIAAAA6DPg5pGtbIQtl485WvgwIBRniMH3skvmxRKEG0g0WDQPpYX9BhSqyMSqzQtkM1HoNHHVrNjncozwkg"></script>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js"></script>
   <script type="text/javascript" src="http://plugins.jquery.com/files/jquery.cookie.js.txt"></script>
 
   <script type="text/javascript">
+    google.load("feeds", "1");
+
     $(document).ready(function(){
       $("#i18n").tabs({
         selected: Math.max(0, $("div#i18n > div").index($(window.location.hash || '#en'))),
@@ -47,6 +50,21 @@
       $("#language img").click(function(e) {
         showLanguage(e.target.id);
       });
+    });
+
+    google.setOnLoadCallback(function() {
+      if($('ul#contributors').length > 0) {
+        var feed = new google.feeds.Feed("http://pledgie.com/campaigns/7149/donations_feed");
+        feed.setNumEntries(500);
+        feed.load(function(result) {
+          if (!result.error) {
+            var container = document.getElementById("feed");
+            $.each(result.feed.entries, function() {
+              $('ul#contributors').append("<li>" + this.title.replace(/donation from\s+/i, "") + "</li>");
+            }); 
+          }
+        });
+      }
     });
   </script>
 </head>

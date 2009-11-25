@@ -1,0 +1,15 @@
+---
+layout: default
+title: Contributors and Donors
+---
+
+h2. Contributors
+
+h2. Donors
+
+The following people have donated money to Cucumber:
+
+<notextile>
+  <a href='http://www.pledgie.com/campaigns/7149'><img alt='Click here to lend your support to: cucumber and make a donation at www.pledgie.com !' src='http://www.pledgie.com/campaigns/7149.png?skin_name=chrome' border='0' /></a>
+  <ul id="contributors"></ul>
+</notextile>
