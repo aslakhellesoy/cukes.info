@@ -4,4 +4,4 @@ title: Artwork
 ---
 h1. Artwork
 
-Links to PSD, PNG etc that people can use to promote Cucumber
+Links to PSD, SVG, PNG etc that people can use to promote Cucumber
