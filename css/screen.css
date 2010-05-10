@@ -27,3 +27,7 @@ dl.keywords dt {
 #language img {
   cursor: pointer;
 }
+
+span.keyword {
+	background-color: green;
+}

@@ -23,6 +23,8 @@ h2. TODO
 * Only show programming language icons for certain pages. Use Textile header to turn on/off?
 
 * Layout inspiration
+** http://diveintohtml5.org/extensibility.html (big letters)
 ** http://opentochoice.org/en/
 ** http://ninject.org
 ** http://matthewjamestaylor.com/blog/perfect-2-column-right-menu.htm
+* The tags page should have a section (sidebar?) for known special tags like @allow-rescue, @javascript etc. with links to where to learn more.

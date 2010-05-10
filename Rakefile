@@ -2,10 +2,9 @@ class I18nExamplesGenerator
   attr_reader :languages
   
   def initialize
+    require 'gherkin'
     require 'cucumber'
     @i18ndir = File.expand_path(File.join(Cucumber::LIBDIR, '../examples/i18n'))
-
-    @languages = Cucumber::LANGUAGES.keys.sort
   end
   
   def generate
@@ -15,17 +14,13 @@ class I18nExamplesGenerator
       io.write(template.result(binding))
     end
   end
-  
-  def keyword(lang, key)
-    Cucumber::LANGUAGES[lang][key]
+
+  def keyword_spans(i18n, key)
+    %Q{<span class="keyword">} + i18n.keywords(key).join(%Q{</span>&nbsp;<span class="keyword">}) + %Q{</span>}
   end
   
   def example(lang)
     Dir["#{@i18ndir}/#{lang}/features/*feature"][0]
-  end
-
-  def lang_name(lang)
-    keyword(lang, 'native') == keyword(lang, 'name') ? keyword(lang, 'native') : "#{keyword(lang, 'native')} (#{keyword(lang, 'name')})"
   end
 
   def pygmentize(lang)

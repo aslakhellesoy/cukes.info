@@ -1,0 +1,16 @@
+---
+layout: default
+title: Editors and IDEs
+---
+h1. Editors and IDEs
+
+All of the most popular text editors and IDEs have Cucumber support. Click on the screenshot
+to go to the project page for a specific one.
+
+|Editor/IDE|Screenshot|Run features|Code completion/Intellisense|Highlight variables|
+||!images/editors/textmate.png!|Yes|Yes|No|
+||!images/editors/rubymine.png!|Yes|Yes|No|
+||!images/editors/netbeans.png!|Yes|Yes|No|
+||!images/editors/vim.png!|Yes|Yes|No|
+||!images/editors/emacs.png!|Yes|Yes|No|
+||!images/editors/visual_studio.png!|Yes|Yes|No|

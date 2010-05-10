@@ -1,37 +1,37 @@
 <div id="i18n" class="ui-tabs ui-widget ui-widget-content ui-corner-all">
 <ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all">
-  <% languages.each do |lang| %>
-    <li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-active"><a href="#<%= lang %>"><%= lang %></a></li>
+  <% Gherkin::I18n.all.each do |i18n| %>
+    <li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-active"><a href="#<%= i18n.iso_code %>"><%= i18n.iso_code %></a></li>
   <% end %>
 </ul>
 
-<% languages.each do |lang| %>
-  <div id="<%= lang %>">
-    <h2><%= lang_name(lang) %></h2>
+<% Gherkin::I18n.all.each do |i18n| %>
+  <div id="<%= i18n.iso_code %>">
+    <h2><%= i18n.keywords(:native)[0] %></h2>
     <dl class="keywords">
       <dt>Feature</dt>
-      <dd><%= keyword(lang, 'feature') %></dd>
+      <dd><%= keyword_spans(i18n, :feature) %></dd>
       <dt>Scenario</dt>
-      <dd><%= keyword(lang, 'scenario') %></dd>
+      <dd><%= keyword_spans(i18n, :scenario) %></dd>
       <dt>Given</dt>
-      <dd><%= keyword(lang, 'given') %></dd>
+      <dd><%= keyword_spans(i18n, :given) %></dd>
       <dt>When</dt>
-      <dd><%= keyword(lang, 'when') %></dd>
+      <dd><%= keyword_spans(i18n, :when) %></dd>
       <dt>Then</dt>
-      <dd><%= keyword(lang, 'then') %></dd>
+      <dd><%= keyword_spans(i18n, :then) %></dd>
       <dt>And</dt>
-      <dd><%= keyword(lang, 'and') %></dd>
+      <dd><%= keyword_spans(i18n, :and) %></dd>
       <dt>But</dt>
-      <dd><%= keyword(lang, 'but') %></dd>
+      <dd><%= keyword_spans(i18n, :but) %></dd>
       <dt>Scenario Outline</dt>
-      <dd><%= keyword(lang, 'scenario_outline') %></dd>
+      <dd><%= keyword_spans(i18n, :scenario_outline) %></dd>
       <dt>Background</dt>
-      <dd><%= keyword(lang, 'background') %></dd>
+      <dd><%= keyword_spans(i18n, :background) %></dd>
       <dt>Examples</dt>
-      <dd><%= keyword(lang, 'examples') %></dd>
+      <dd><%= keyword_spans(i18n, :examples) %></dd>
     </dl>
     
-    <% if example(lang) %><%= pygmentize(lang) %><% else %>No example. Maybe you want to contribute one?<% end %>
+    <% if example(i18n.iso_code) %><%= pygmentize(i18n.iso_code) %><% else %>No example. Maybe you want to contribute one?<% end %>
   </div>
 <% end %>
 </div>
