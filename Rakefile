@@ -1,3 +1,5 @@
+require 'bundler/setup'
+
 class I18nExamplesGenerator
   attr_reader :languages
   
