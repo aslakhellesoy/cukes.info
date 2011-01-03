@@ -1,4 +1,4 @@
-
+(function() {
   function showBackend(backend) {
     $.each(["ruby", "java", "csharp", "scala", "groovy", "clojure", "javascript", "ioke"], function(i, b) {
       $("." + b).hide();
@@ -19,6 +19,7 @@
 
   showBackend($.cookie('backend') || "ruby");
   
-  $("#backend img").click(function(e) {
-    showBackend(e.target.id);
+  $("#backend").change(function(e) {
+    showBackend(this.value);
   });
+})();
