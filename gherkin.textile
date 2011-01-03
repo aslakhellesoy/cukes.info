@@ -1,0 +1,31 @@
+---
+layout: default
+title: Gherkin
+---
+h1. Gherkin
+
+Gherkin is a very simple language. This is Hello World.
+
+{% highlight gherkin %}
+# Some comments
+@tag
+Feature: hello
+  # Some more
+  Scenario: world
+    Given I have 4 cukes in my belly
+      """
+      yes
+      it is
+      """
+    When I have a table:
+      | oh | yes  |
+      | my | mine |
+
+  Scenario Outline:
+    Given I eat <n> cukes
+    
+    Examples:
+      | n  |
+      | 10 |
+      | rr |
+{% endhighlight %}

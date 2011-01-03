@@ -1,24 +1,4 @@
-body { 
-  background-image: url("/images/textured-background.jpg");
-  font-size: 1em;
-}
-
-div#translations {
-  position: relative;
-}
-
-dl.keywords dt {
-  float: left;
-  width: 10em;
-}
-
-.ui-tabs .ui-tabs-nav li a {
-  float:left;
-  padding:0.1em 0.1em;
-  text-decoration:none;
-}
-
-.highlight { 
+code { 
   padding: 0.1em 1em;
   -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
@@ -26,8 +6,4 @@ dl.keywords dt {
 
 #language img {
   cursor: pointer;
-}
-
-span.keyword {
-	background-color: green;
 }

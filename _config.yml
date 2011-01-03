@@ -1,3 +1,4 @@
 pygments: true
 textile: true
 secure: false
+liquid: true
