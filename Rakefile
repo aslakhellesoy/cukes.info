@@ -26,7 +26,7 @@ class I18nExamplesGenerator
   end
 
   def pygmentize(lang)
-    pygmentize = "pygmentize -f html -O encoding=utf-8 #{example(lang)}"
+    pygmentize = %{pygmentize -f html -O encoding=utf-8 "#{example(lang)}"}
     puts pygmentize
     `#{pygmentize}`
   end

@@ -3,12 +3,10 @@ h1. cukes.info
 This is the new website for cukes.info. It uses Jekyll.
 
 h2. Software
-* Install pygments
-* Install http://github.com/aslakhellesoy/cucumber-pygments-lexer : sudo python setup.py install
-* Install http://github.com/aslakhellesoy/pygments-groovy : sudo python setup.py install
-* Install http://github.com/aslakhellesoy/jekyll : rake install
-* Install the latest cucumber gem
-* Install Ioke lexer: http://github.com/olabini/ioke/tree/master/share/pygments/
+
+  ./install_osx.sh
+
+If you're on a different OS, please contribute a new installation script
 
 h2. Building
 
