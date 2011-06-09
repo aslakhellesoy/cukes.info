@@ -1,0 +1,24 @@
+.console { 
+	background-color: #000000;
+	color: #ffffff;
+}
+
+.console .failed { 
+	color: #ff0000;
+}
+
+.console .passed { 
+	color: #00ff00;
+}
+
+.console .skipped { 
+	color: #00aaaa;
+}
+
+.console .comment { 
+	color: #777777;
+}
+
+.console .undefined { 
+	color: #aa5500;
+}
