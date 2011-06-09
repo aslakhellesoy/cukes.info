@@ -15,12 +15,12 @@
    width="1052.3625"
    height="1488.1875"
    xml:space="preserve"
-   sodipodi:docname="cucumber_slogan.svg"
+   sodipodi:docname="slogan.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape"
    version="1.1"
-   inkscape:export-filename="/Users/ahellesoy/scm/cukes.info/images/slogan/slogan_733x141.png"
-   inkscape:export-xdpi="90"
-   inkscape:export-ydpi="90"><metadata
+   inkscape:export-filename="/Users/ahellesoy/scm/cucumber_site/images/cuke_logo.png"
+   inkscape:export-xdpi="91.019997"
+   inkscape:export-ydpi="91.019997"><metadata
      id="metadata7"><rdf:RDF><cc:Work
          rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
@@ -274,8 +274,8 @@
      inkscape:zoom="1.3277897"
      inkscape:cx="544.64216"
      inkscape:cy="949.28993"
-     inkscape:window-x="160"
-     inkscape:window-y="39"
+     inkscape:window-x="222"
+     inkscape:window-y="41"
      inkscape:current-layer="g11"
      inkscape:window-maximized="0" /><g
      id="g11"
@@ -298,6 +298,7 @@
 
 
 
+
 <text
    transform="scale(1,-1)"
    id="text25"
@@ -311,6 +312,7 @@
      id="tspan27"
      x="128.46941"
      y="-548.35718" /></text>
+
 
 
 
@@ -332,6 +334,7 @@
 
 
 
+
 <text
    transform="scale(1,-1)"
    id="text33"
@@ -348,6 +351,7 @@
 
 
 
+
 <text
    transform="scale(1,-1)"
    id="text37"
@@ -361,6 +365,7 @@
      y="-34.90789"
      sodipodi:role="line"
      id="tspan39" /></text>
+
 
 
 
@@ -457,6 +462,7 @@
      x="128.48833"
      style="font-size:67.12883759000000339px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#71b72d;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Devroye;-inkscape-font-specification:Devroye">Cucumber</tspan></text>
 
+
 <text
    id="text3355"
    sodipodi:linespacing="125%"
@@ -476,6 +482,7 @@
 
 
 
+
 <text
    transform="scale(1,-1)"
    inkscape:export-ydpi="83.060699"
@@ -491,6 +498,7 @@
      x="466.6619"
      style="font-size:17.60000038px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:0%;writing-mode:lr-tb;text-anchor:start;fill:#225c2b;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Devroye;-inkscape-font-specification:Devroye"
      id="tspan4336">behaviour driven development</tspan></text>
+
 <text
    xml:space="preserve"
    style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
@@ -500,7 +508,8 @@
    sodipodi:linespacing="125%"
    transform="matrix(0.8,0,0,-0.8,0,1190.55)"><tspan
      sodipodi:role="line"
-     id="tspan4344"></tspan></text>
+     id="tspan4344" /></text>
+
 <text
    id="text4348"
    sodipodi:linespacing="0%"
@@ -516,4 +525,5 @@
      x="503.18207"
      y="-701.11212"
      sodipodi:role="line">with elegance and joy</tspan></text>
+
 </g></svg>
