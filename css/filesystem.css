@@ -1,0 +1,17 @@
+.filesystem li.feature {
+	list-style-image: url('../images/bubble/bubble_16x16.png');
+}
+
+.filesystem li.dir {
+	/* todo: proper folder */
+	list-style-image: url('../images/bubble/bubble_16x16.png');
+}
+
+.filesystem li.rb {
+	/* todo: proper ruby */
+	list-style-image: url('../images/bubble/bubble_16x16.png');
+}
+
+.filesystem .content {
+	display: block;
+}
